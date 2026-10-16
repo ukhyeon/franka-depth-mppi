@@ -1,0 +1,23 @@
+{
+  "condition": "R",
+  "assumed_robot_effective_mass_kg": 5.0,
+  "assumed_hand_effective_mass_kg": null,
+  "reduced_mass_kg": null,
+  "reference_reduced_mass_kg": 0.5357142857142857,
+  "eta_calculated_m": 0.025,
+  "alpha": null,
+  "mu_formula": "m_r*m_h/(m_r+m_h)",
+  "eta_formula": "0.025*sqrt(mu(m_h)/mu(0.6))",
+  "mass_values_are_assumptions": true,
+  "interpretation": "force-ratio-inspired heuristic activation policy; not physically derived safety distance or actual force prediction",
+  "robot_mass_source": "fixed assumption; not calculated or validated for Franka",
+  "alpha_gpu": 0.0,
+  "eta_gpu_m": 0.02500000037252903,
+  "weight": 100000,
+  "slots": 64,
+  "patch_dims_m": [
+    0.001,
+    0.001,
+    0.001
+  ]
+}

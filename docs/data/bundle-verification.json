@@ -1,0 +1,30 @@
+{
+  "copied_files_hash_verified": 295,
+  "metadata_redactions": 4,
+  "depth_frames": 236,
+  "steps": 472,
+  "shared_control_and_patch_schedules": true,
+  "goal_arrivals": {
+    "R": {
+      "B_arrival_s": 5.016666928306222,
+      "position_mm": 2.435681177303195,
+      "orientation_rad": 0.04747752100229263
+    },
+    "LOW": {
+      "B_arrival_s": 5.266666941344738,
+      "position_mm": 9.769433178007603,
+      "orientation_rad": 0.032093461602926254
+    },
+    "HIGH": {
+      "B_arrival_s": 5.350000279024243,
+      "position_mm": 9.89304669201374,
+      "orientation_rad": 0.028168601915240288
+    }
+  },
+  "markdown_links": "valid",
+  "python_syntax": "valid",
+  "svg_xml": "valid",
+  "shell_syntax": "valid",
+  "isaac_sim_cli_help": "passed, exit 0; no simulation initialized",
+  "new_policy_experiments": "none"
+}

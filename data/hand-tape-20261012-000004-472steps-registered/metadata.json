@@ -1,0 +1,3379 @@
+{
+  "device": "Intel RealSense D435I",
+  "depth_unit": "raw_z16:uint16 SDK units; depth_m:float32 meters, post clip and edge mask",
+  "depth_scale_m_per_unit": 0.0010000000474974513,
+  "intrinsics": [
+    [
+      606.1796875,
+      0.0,
+      323.9846496582031
+    ],
+    [
+      0.0,
+      606.4025268554688,
+      237.44039916992188
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "alignment": "depth to color640x480; no RGB stored",
+  "camera_to_robot_pose_wxyz": [
+    -0.05,
+    0,
+    0.45,
+    0.5,
+    -0.5,
+    0.5,
+    -0.5
+  ],
+  "physics_dt": 0.016666666666666666,
+  "solver_dt": 0.02,
+  "voxel_size_m": 0.03,
+  "integrator": "occupancy",
+  "map_initial_state": "fresh empty Mapper",
+  "map_operations": [
+    "decay_occupancy",
+    "add_depth_frame",
+    "update_esdf",
+    "cuda_synchronize",
+    "update_hashmaps"
+  ],
+  "clipping_distance_m": 0.7,
+  "edge_mask_ratio": 0.05,
+  "warmup_frames": 90,
+  "initial_robot": "franka.yml retract_config",
+  "seed": 0,
+  "scene": {
+    "goals_wxyz": [
+      [
+        0.4,
+        -0.5,
+        0.4,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0.4,
+        0.5,
+        0.4,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "camera_to_robot_pose_wxyz": [
+      -0.05,
+      0,
+      0.45,
+      0.5,
+      -0.5,
+      0.5,
+      -0.5
+    ],
+    "map_voxel_m": 0.03,
+    "clipping_distance_m": 0.7,
+    "goal_hold_sim_s": 0.0,
+    "position_tolerance_m": 0.01,
+    "orientation_tolerance_rad": 0.05,
+    "physics_dt": 0.016666666666666666,
+    "solver_dt": 0.02,
+    "seed": 0,
+    "sampling": "original verified MPPI config unchanged",
+    "roi_scope": "original manual ROI; central visible link region only; endpoints not fully observed",
+    "goal_switch_mode": "immediate_on_actual_tolerance"
+  },
+  "target_config": {
+    "manual_target_world_bounds_m": {
+      "min": [
+        0.42,
+        -0.08,
+        0.32
+      ],
+      "max": [
+        0.58,
+        0.08,
+        0.48
+      ]
+    },
+    "patch_bin_yz_m": 0.02,
+    "min_points_per_bin": 12,
+    "nominal_point_proxy_dims_m": [
+      0.001,
+      0.001,
+      0.001
+    ],
+    "proxy_capacity": 64,
+    "additional_margin_m_choices": [
+      0,
+      0.03
+    ],
+    "scope": "manual ROI surrogate object; measured point anchors only,1mm base cube is numerical planning proxy, not measured volume; inflation is experimental margin, not measured occluded object or validated safety distance"
+  },
+  "initial_joint_positions": [
+    0.0,
+    -1.3,
+    0.0,
+    -2.5,
+    0.0,
+    1.0,
+    0.0,
+    0.04,
+    0.04
+  ],
+  "record_label": "hand-final",
+  "hand_observation": {
+    "experiment": "real hand, static, manual ROI (no hand-recognition model)",
+    "roi": {
+      "min": [
+        0.42,
+        -0.08,
+        0.32
+      ],
+      "max": [
+        0.58,
+        0.08,
+        0.48
+      ]
+    },
+    "patch_rule": {
+      "patch_bin_yz_m": 0.02,
+      "min_points_per_bin": 12,
+      "nominal_point_proxy_dims_m": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "proxy_capacity": 64
+    },
+    "recommended_hand": {
+      "pose": "palm facing the lens, fingers together pointing up, forearm vertical below the hand with the elbow resting on a support; arm stays below the hand (not behind it, not from the side)",
+      "palm_face_x_m": 0.55,
+      "center_y_m": 0.0,
+      "wrist_z_m": 0.29,
+      "fingertip_z_m": 0.47,
+      "camera_frame": {
+        "palm_depth_along_axis_m": 0.6,
+        "horizontal": "centered on the optical axis",
+        "fingertips_above_lens_height_m": 0.02,
+        "wrist_below_lens_height_m": 0.16
+      },
+      "rule": "fingertips >= 1 cm inside ROI top, maximize hand-face fraction in ROI (analysis/hand-height-scan.json); fixed before any capture or LOW/HIGH run",
+      "assumed_hand_dims_m": {
+        "palm_width": 0.09,
+        "length_wrist_to_tip": 0.18,
+        "palm_thickness": 0.03
+      }
+    },
+    "nominal_sweep": {
+      "run": "../d435i-mppi-shuttle/results/20261011-215221-diagnostic-R-reached-measured-dt0.016666666666666666-no-camera",
+      "AB_steps": [
+        131,
+        296
+      ],
+      "crossing_step": 160,
+      "crossing_q": [
+        0.0726250559091568,
+        0.3123628795146942,
+        -0.13365545868873596,
+        -1.7099140882492065,
+        0.26647135615348816,
+        1.8725483417510986,
+        -0.0098244184628129
+      ],
+      "crossing_ee": [
+        0.6294907331466675,
+        -0.011641524732112885,
+        0.39930203557014465
+      ]
+    },
+    "capture": {
+      "stages": [
+        "BACKGROUND",
+        "PLACING",
+        "HOLD",
+        "REMOVED"
+      ],
+      "auto_stop_after_removed_sim_s": 3.0,
+      "recommended_hold_wall_s": 15,
+      "stable_frame_rule": {
+        "roi_centroid_shift_max_m": 0.01,
+        "roi_points_min_fraction_of_hold_median": 0.5,
+        "window": "running median of the current run (registered tapes); HOLD median (unregistered)"
+      },
+      "tape": "longest contiguous stable HOLD run; frames replayed in recorded order; looped only if the requested replay is longer, and flagged",
+      "hold_frames_target": 200,
+      "tape_steps": 600,
+      "registration": "virtual camera translation from the capture (register_hand.py); placement precision not required",
+      "live_guide": {
+        "empty_view_max_points": 200,
+        "hand_depth_range_m": [
+          0.4,
+          0.62
+        ],
+        "stable_rule": "running median of current run, 1 cm (register_hand.stable_runs)"
+      },
+      "hold_frames_note": "200 frames >= ~165 needed for one A->B replay (~5.3 s); 600-step tapes reuse frames cyclically (flagged looped)"
+    },
+    "background_limits": {
+      "roi_points_max": 50,
+      "near_path_points_max": 200,
+      "note": "checked with no hand: ROI and nominal robot path corridor (+0.05 m) should be empty"
+    },
+    "bin_mixed_depth_m": 0.03,
+    "behind_hand_m": 0.04
+  },
+  "hand_capture": true,
+  "capture_robot_pose": "crossing",
+  "goal_events": [],
+  "map_steps": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32,
+    34,
+    36,
+    38,
+    40,
+    42,
+    44,
+    46,
+    48,
+    50,
+    52,
+    54,
+    56,
+    58,
+    60,
+    62,
+    64,
+    66,
+    68,
+    70,
+    72,
+    74,
+    76,
+    78,
+    80,
+    82,
+    84,
+    86,
+    88,
+    90,
+    92,
+    94,
+    96,
+    98,
+    100,
+    102,
+    104,
+    106,
+    108,
+    110,
+    112,
+    114,
+    116,
+    118,
+    120,
+    122,
+    124,
+    126,
+    128,
+    130,
+    132,
+    134,
+    136,
+    138,
+    140,
+    142,
+    144,
+    146,
+    148,
+    150,
+    152,
+    154,
+    156,
+    158,
+    160,
+    162,
+    164,
+    166,
+    168,
+    170,
+    172,
+    174,
+    176,
+    178,
+    180,
+    182,
+    184,
+    186,
+    188,
+    190,
+    192,
+    194,
+    196,
+    198,
+    200,
+    202,
+    204,
+    206,
+    208,
+    210,
+    212,
+    214,
+    216,
+    218,
+    220,
+    222,
+    224,
+    226,
+    228,
+    230,
+    232,
+    234,
+    236,
+    238,
+    240,
+    242,
+    244,
+    246,
+    248,
+    250,
+    252,
+    254,
+    256,
+    258,
+    260,
+    262,
+    264,
+    266,
+    268,
+    270,
+    272,
+    274,
+    276,
+    278,
+    280,
+    282,
+    284,
+    286,
+    288,
+    290,
+    292,
+    294,
+    296,
+    298,
+    300,
+    302,
+    304,
+    306,
+    308,
+    310,
+    312,
+    314,
+    316,
+    318,
+    320,
+    322,
+    324,
+    326,
+    328,
+    330,
+    332,
+    334,
+    336,
+    338,
+    340,
+    342,
+    344,
+    346,
+    348,
+    350,
+    352,
+    354,
+    356,
+    358,
+    360,
+    362,
+    364,
+    366,
+    368,
+    370,
+    372,
+    374,
+    376,
+    378,
+    380,
+    382,
+    384,
+    386,
+    388,
+    390,
+    392,
+    394,
+    396,
+    398,
+    400,
+    402,
+    404,
+    406,
+    408,
+    410,
+    412,
+    414,
+    416,
+    418,
+    420,
+    422,
+    424,
+    426,
+    428,
+    430,
+    432,
+    434,
+    436,
+    438,
+    440,
+    442,
+    444,
+    446,
+    448,
+    450,
+    452,
+    454,
+    456,
+    458,
+    460,
+    462,
+    464,
+    466,
+    468,
+    470,
+    472
+  ],
+  "manipulation_events": [
+    {
+      "stage": "HOLD",
+      "step": 1,
+      "sim_s": 0.0,
+      "operator_confirmed": true
+    }
+  ],
+  "total_steps": 472,
+  "frame_count": 236,
+  "phase_events": [],
+  "frame_manifest_sha256": "db0c8ea1c344a51649ee8e4a331a4611105e7d2abedd47330030775b955f7d5e",
+  "hand_tape": {
+    "source_capture": "inputs/20261012-000004",
+    "source_frames": 1250,
+    "hold_frames": 510,
+    "stable_hold_frames": 236,
+    "used_run": {
+      "first_ordinal": 635,
+      "last_ordinal": 870,
+      "frames": 236,
+      "sim_time": [
+        21.233334440737963,
+        29.066668182611465
+      ],
+      "sdk_timestamp_ms": [
+        1791730883969.6536,
+        1791730923860.9146
+      ],
+      "wall_utc_ns": [
+        1791730884026373052,
+        1791730923904074315
+      ]
+    },
+    "looped": false,
+    "loops": 1,
+    "unstable_hold_frames": [
+      {
+        "ordinal": 613,
+        "sim_time": 20.500001069158316,
+        "sdk_timestamp_ms": 1791730880467.6438,
+        "roi_points": 29481,
+        "centroid_shift_m": 0.02235461575664377
+      },
+      {
+        "ordinal": 614,
+        "sim_time": 20.533334404230118,
+        "sdk_timestamp_ms": 1791730880567.7007,
+        "roi_points": 29315,
+        "centroid_shift_m": 0.02260428849305372
+      },
+      {
+        "ordinal": 615,
+        "sim_time": 20.56666773930192,
+        "sdk_timestamp_ms": 1791730880767.8135,
+        "roi_points": 29674,
+        "centroid_shift_m": 0.02175802871868221
+      },
+      {
+        "ordinal": 616,
+        "sim_time": 20.600001074373722,
+        "sdk_timestamp_ms": 1791730880867.8706,
+        "roi_points": 29439,
+        "centroid_shift_m": 0.022369905456803358
+      },
+      {
+        "ordinal": 617,
+        "sim_time": 20.633334409445524,
+        "sdk_timestamp_ms": 1791730881067.9866,
+        "roi_points": 30248,
+        "centroid_shift_m": 0.019275607566008084
+      },
+      {
+        "ordinal": 618,
+        "sim_time": 20.666667744517326,
+        "sdk_timestamp_ms": 1791730881234.7488,
+        "roi_points": 29820,
+        "centroid_shift_m": 0.020718305635169302
+      },
+      {
+        "ordinal": 619,
+        "sim_time": 20.70000107958913,
+        "sdk_timestamp_ms": 1791730881401.5122,
+        "roi_points": 29520,
+        "centroid_shift_m": 0.021742685325904523
+      },
+      {
+        "ordinal": 620,
+        "sim_time": 20.73333441466093,
+        "sdk_timestamp_ms": 1791730881501.5703,
+        "roi_points": 29736,
+        "centroid_shift_m": 0.020422971229725025
+      },
+      {
+        "ordinal": 621,
+        "sim_time": 20.766667749732733,
+        "sdk_timestamp_ms": 1791730881768.3906,
+        "roi_points": 29832,
+        "centroid_shift_m": 0.019839703267262962
+      },
+      {
+        "ordinal": 622,
+        "sim_time": 20.800001084804535,
+        "sdk_timestamp_ms": 1791730881868.4485,
+        "roi_points": 29717,
+        "centroid_shift_m": 0.02107144512615557
+      },
+      {
+        "ordinal": 623,
+        "sim_time": 20.833334419876337,
+        "sdk_timestamp_ms": 1791730882035.2112,
+        "roi_points": 29718,
+        "centroid_shift_m": 0.020778741219735383
+      },
+      {
+        "ordinal": 624,
+        "sim_time": 20.86666775494814,
+        "sdk_timestamp_ms": 1791730882168.6218,
+        "roi_points": 29740,
+        "centroid_shift_m": 0.02112641220247033
+      },
+      {
+        "ordinal": 625,
+        "sim_time": 20.90000109001994,
+        "sdk_timestamp_ms": 1791730882368.7383,
+        "roi_points": 29879,
+        "centroid_shift_m": 0.021213890305197602
+      },
+      {
+        "ordinal": 626,
+        "sim_time": 20.933334425091743,
+        "sdk_timestamp_ms": 1791730882468.7954,
+        "roi_points": 30165,
+        "centroid_shift_m": 0.020204355484264545
+      },
+      {
+        "ordinal": 627,
+        "sim_time": 20.966667760163546,
+        "sdk_timestamp_ms": 1791730882668.9116,
+        "roi_points": 30133,
+        "centroid_shift_m": 0.02190752833898105
+      },
+      {
+        "ordinal": 628,
+        "sim_time": 21.000001095235348,
+        "sdk_timestamp_ms": 1791730882802.3225,
+        "roi_points": 30346,
+        "centroid_shift_m": 0.022493847240823907
+      },
+      {
+        "ordinal": 629,
+        "sim_time": 21.03333443030715,
+        "sdk_timestamp_ms": 1791730883035.7888,
+        "roi_points": 30356,
+        "centroid_shift_m": 0.023085545000474005
+      },
+      {
+        "ordinal": 630,
+        "sim_time": 21.066667765378952,
+        "sdk_timestamp_ms": 1791730883202.5508,
+        "roi_points": 30409,
+        "centroid_shift_m": 0.023190346077105996
+      },
+      {
+        "ordinal": 631,
+        "sim_time": 21.100001100450754,
+        "sdk_timestamp_ms": 1791730883335.9592,
+        "roi_points": 29947,
+        "centroid_shift_m": 0.021925085809431692
+      },
+      {
+        "ordinal": 632,
+        "sim_time": 21.133334435522556,
+        "sdk_timestamp_ms": 1791730883469.3687,
+        "roi_points": 30184,
+        "centroid_shift_m": 0.01949491010230948
+      },
+      {
+        "ordinal": 633,
+        "sim_time": 21.16666777059436,
+        "sdk_timestamp_ms": 1791730883702.835,
+        "roi_points": 29166,
+        "centroid_shift_m": 0.01681982606600503
+      },
+      {
+        "ordinal": 634,
+        "sim_time": 21.20000110566616,
+        "sdk_timestamp_ms": 1791730883836.2434,
+        "roi_points": 28798,
+        "centroid_shift_m": 0.015582638782730765
+      },
+      {
+        "ordinal": 871,
+        "sim_time": 29.100001517683268,
+        "sdk_timestamp_ms": 1791730924027.6375,
+        "roi_points": 31169,
+        "centroid_shift_m": 0.030494189316990335
+      },
+      {
+        "ordinal": 872,
+        "sim_time": 29.13333485275507,
+        "sdk_timestamp_ms": 1791730924127.6724,
+        "roi_points": 33914,
+        "centroid_shift_m": 0.05992783930979184
+      },
+      {
+        "ordinal": 873,
+        "sim_time": 29.166668187826872,
+        "sdk_timestamp_ms": 1791730924427.7734,
+        "roi_points": 8714,
+        "centroid_shift_m": 0.2794044697470792
+      },
+      {
+        "ordinal": 874,
+        "sim_time": 29.200001522898674,
+        "sdk_timestamp_ms": 1791730924527.8064,
+        "roi_points": 6568,
+        "centroid_shift_m": 0.2783354206451086
+      },
+      {
+        "ordinal": 875,
+        "sim_time": 29.233334857970476,
+        "sdk_timestamp_ms": 1791730924627.8389,
+        "roi_points": 4588,
+        "centroid_shift_m": 0.2752146769806089
+      },
+      {
+        "ordinal": 876,
+        "sim_time": 29.26666819304228,
+        "sdk_timestamp_ms": 1791730924761.2136,
+        "roi_points": 895,
+        "centroid_shift_m": 0.28939546348275585
+      },
+      {
+        "ordinal": 877,
+        "sim_time": 29.30000152811408,
+        "sdk_timestamp_ms": 1791730924961.2764,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 878,
+        "sim_time": 29.333334863185883,
+        "sdk_timestamp_ms": 1791730925061.3071,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 879,
+        "sim_time": 29.366668198257685,
+        "sdk_timestamp_ms": 1791730925194.6792,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 880,
+        "sim_time": 29.400001533329487,
+        "sdk_timestamp_ms": 1791730925261.3655,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 881,
+        "sim_time": 29.43333486840129,
+        "sdk_timestamp_ms": 1791730925394.7368,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 882,
+        "sim_time": 29.46666820347309,
+        "sdk_timestamp_ms": 1791730925494.7646,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 883,
+        "sim_time": 29.500001538544893,
+        "sdk_timestamp_ms": 1791730925628.1328,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 884,
+        "sim_time": 29.533334873616695,
+        "sdk_timestamp_ms": 1791730925694.8171,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 885,
+        "sim_time": 29.566668208688498,
+        "sdk_timestamp_ms": 1791730925861.5261,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 886,
+        "sim_time": 29.6000015437603,
+        "sdk_timestamp_ms": 1791730925928.2139,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 887,
+        "sim_time": 29.633334878832102,
+        "sdk_timestamp_ms": 1791730926028.2512,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 888,
+        "sim_time": 29.666668213903904,
+        "sdk_timestamp_ms": 1791730926161.635,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 889,
+        "sim_time": 29.700001548975706,
+        "sdk_timestamp_ms": 1791730926261.6724,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 890,
+        "sim_time": 29.73333488404751,
+        "sdk_timestamp_ms": 1791730926361.7092,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 891,
+        "sim_time": 29.76666821911931,
+        "sdk_timestamp_ms": 1791730926495.09,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 892,
+        "sim_time": 29.800001554191113,
+        "sdk_timestamp_ms": 1791730926561.7808,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 893,
+        "sim_time": 29.833334889262915,
+        "sdk_timestamp_ms": 1791730926695.1614,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 894,
+        "sim_time": 29.866668224334717,
+        "sdk_timestamp_ms": 1791730926795.1963,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 895,
+        "sim_time": 29.90000155940652,
+        "sdk_timestamp_ms": 1791730926895.2297,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 896,
+        "sim_time": 29.93333489447832,
+        "sdk_timestamp_ms": 1791730926995.2688,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 897,
+        "sim_time": 29.966668229550123,
+        "sdk_timestamp_ms": 1791730927128.6533,
+        "roi_points": 675,
+        "centroid_shift_m": 0.30180889436954284
+      },
+      {
+        "ordinal": 898,
+        "sim_time": 30.000001564621925,
+        "sdk_timestamp_ms": 1791730927195.3452,
+        "roi_points": 1943,
+        "centroid_shift_m": 0.3024440215151253
+      },
+      {
+        "ordinal": 899,
+        "sim_time": 30.033334899693727,
+        "sdk_timestamp_ms": 1791730927328.7288,
+        "roi_points": 21503,
+        "centroid_shift_m": 0.1528059278807646
+      },
+      {
+        "ordinal": 900,
+        "sim_time": 30.06666823476553,
+        "sdk_timestamp_ms": 1791730927462.1104,
+        "roi_points": 21609,
+        "centroid_shift_m": 0.06103169731209047
+      },
+      {
+        "ordinal": 901,
+        "sim_time": 30.10000156983733,
+        "sdk_timestamp_ms": 1791730927695.5283,
+        "roi_points": 20303,
+        "centroid_shift_m": 0.07881226206659812
+      },
+      {
+        "ordinal": 902,
+        "sim_time": 30.133334904909134,
+        "sdk_timestamp_ms": 1791730927862.2532,
+        "roi_points": 22851,
+        "centroid_shift_m": 0.07520799388795325
+      },
+      {
+        "ordinal": 903,
+        "sim_time": 30.166668239980936,
+        "sdk_timestamp_ms": 1791730928095.6807,
+        "roi_points": 26036,
+        "centroid_shift_m": 0.06429885883306885
+      },
+      {
+        "ordinal": 904,
+        "sim_time": 30.200001575052738,
+        "sdk_timestamp_ms": 1791730928229.0674,
+        "roi_points": 26381,
+        "centroid_shift_m": 0.05839599291944337
+      },
+      {
+        "ordinal": 905,
+        "sim_time": 30.23333491012454,
+        "sdk_timestamp_ms": 1791730928495.8406,
+        "roi_points": 28400,
+        "centroid_shift_m": 0.050691031102433975
+      },
+      {
+        "ordinal": 906,
+        "sim_time": 30.266668245196342,
+        "sdk_timestamp_ms": 1791730928662.5728,
+        "roi_points": 29173,
+        "centroid_shift_m": 0.046103262352481314
+      },
+      {
+        "ordinal": 907,
+        "sim_time": 30.300001580268145,
+        "sdk_timestamp_ms": 1791730928862.649,
+        "roi_points": 28122,
+        "centroid_shift_m": 0.03401828088791913
+      },
+      {
+        "ordinal": 908,
+        "sim_time": 30.333334915339947,
+        "sdk_timestamp_ms": 1791730928962.6858,
+        "roi_points": 28237,
+        "centroid_shift_m": 0.029257976930732055
+      },
+      {
+        "ordinal": 909,
+        "sim_time": 30.36666825041175,
+        "sdk_timestamp_ms": 1791730929262.79,
+        "roi_points": 26654,
+        "centroid_shift_m": 0.014558603513736255
+      },
+      {
+        "ordinal": 910,
+        "sim_time": 30.40000158548355,
+        "sdk_timestamp_ms": 1791730929396.1685,
+        "roi_points": 24994,
+        "centroid_shift_m": 0.016557123560080697
+      },
+      {
+        "ordinal": 911,
+        "sim_time": 30.433334920555353,
+        "sdk_timestamp_ms": 1791730929562.889,
+        "roi_points": 24214,
+        "centroid_shift_m": 0.0256397379497335
+      },
+      {
+        "ordinal": 912,
+        "sim_time": 30.466668255627155,
+        "sdk_timestamp_ms": 1791730929762.9526,
+        "roi_points": 23329,
+        "centroid_shift_m": 0.035262080955740495
+      },
+      {
+        "ordinal": 913,
+        "sim_time": 30.500001590698957,
+        "sdk_timestamp_ms": 1791730929996.3623,
+        "roi_points": 22926,
+        "centroid_shift_m": 0.037072136786433556
+      },
+      {
+        "ordinal": 914,
+        "sim_time": 30.53333492577076,
+        "sdk_timestamp_ms": 1791730930129.7402,
+        "roi_points": 23161,
+        "centroid_shift_m": 0.03342597931543224
+      },
+      {
+        "ordinal": 915,
+        "sim_time": 30.56666826084256,
+        "sdk_timestamp_ms": 1791730930396.4946,
+        "roi_points": 23610,
+        "centroid_shift_m": 0.03143571522023358
+      },
+      {
+        "ordinal": 916,
+        "sim_time": 30.600001595914364,
+        "sdk_timestamp_ms": 1791730930529.8694,
+        "roi_points": 23648,
+        "centroid_shift_m": 0.03476811982473904
+      },
+      {
+        "ordinal": 917,
+        "sim_time": 30.633334930986166,
+        "sdk_timestamp_ms": 1791730930796.6174,
+        "roi_points": 23879,
+        "centroid_shift_m": 0.03295454749520674
+      },
+      {
+        "ordinal": 918,
+        "sim_time": 30.666668266057968,
+        "sdk_timestamp_ms": 1791730930996.68,
+        "roi_points": 24564,
+        "centroid_shift_m": 0.028922990761080684
+      },
+      {
+        "ordinal": 919,
+        "sim_time": 30.70000160112977,
+        "sdk_timestamp_ms": 1791730931196.7466,
+        "roi_points": 24563,
+        "centroid_shift_m": 0.02801695452896945
+      },
+      {
+        "ordinal": 920,
+        "sim_time": 30.733334936201572,
+        "sdk_timestamp_ms": 1791730931330.123,
+        "roi_points": 24953,
+        "centroid_shift_m": 0.026658463793248006
+      },
+      {
+        "ordinal": 921,
+        "sim_time": 30.766668271273375,
+        "sdk_timestamp_ms": 1791730931663.558,
+        "roi_points": 25301,
+        "centroid_shift_m": 0.024695748154214516
+      },
+      {
+        "ordinal": 922,
+        "sim_time": 30.800001606345177,
+        "sdk_timestamp_ms": 1791730931796.9297,
+        "roi_points": 25198,
+        "centroid_shift_m": 0.024451114182943594
+      },
+      {
+        "ordinal": 923,
+        "sim_time": 30.83333494141698,
+        "sdk_timestamp_ms": 1791730931996.993,
+        "roi_points": 25018,
+        "centroid_shift_m": 0.024595727606186394
+      },
+      {
+        "ordinal": 924,
+        "sim_time": 30.86666827648878,
+        "sdk_timestamp_ms": 1791730932197.0605,
+        "roi_points": 24817,
+        "centroid_shift_m": 0.023814475217364597
+      },
+      {
+        "ordinal": 925,
+        "sim_time": 30.900001611560583,
+        "sdk_timestamp_ms": 1791730932463.8127,
+        "roi_points": 24784,
+        "centroid_shift_m": 0.02451630958971429
+      },
+      {
+        "ordinal": 926,
+        "sim_time": 30.933334946632385,
+        "sdk_timestamp_ms": 1791730932597.1875,
+        "roi_points": 24822,
+        "centroid_shift_m": 0.025059203130119615
+      },
+      {
+        "ordinal": 927,
+        "sim_time": 30.966668281704187,
+        "sdk_timestamp_ms": 1791730932830.59,
+        "roi_points": 24813,
+        "centroid_shift_m": 0.025180728015037925
+      },
+      {
+        "ordinal": 928,
+        "sim_time": 31.00000161677599,
+        "sdk_timestamp_ms": 1791730932997.3113,
+        "roi_points": 24676,
+        "centroid_shift_m": 0.024904631779229736
+      },
+      {
+        "ordinal": 929,
+        "sim_time": 31.03333495184779,
+        "sdk_timestamp_ms": 1791730933264.068,
+        "roi_points": 24628,
+        "centroid_shift_m": 0.0261492977215825
+      },
+      {
+        "ordinal": 930,
+        "sim_time": 31.066668286919594,
+        "sdk_timestamp_ms": 1791730933497.4778,
+        "roi_points": 24420,
+        "centroid_shift_m": 0.027465796737561186
+      },
+      {
+        "ordinal": 931,
+        "sim_time": 31.100001621991396,
+        "sdk_timestamp_ms": 1791730933697.5398,
+        "roi_points": 24828,
+        "centroid_shift_m": 0.025682110806833375
+      },
+      {
+        "ordinal": 932,
+        "sim_time": 31.133334957063198,
+        "sdk_timestamp_ms": 1791730933864.2568,
+        "roi_points": 24840,
+        "centroid_shift_m": 0.02611091857714042
+      },
+      {
+        "ordinal": 933,
+        "sim_time": 31.166668292135,
+        "sdk_timestamp_ms": 1791730934197.6985,
+        "roi_points": 24218,
+        "centroid_shift_m": 0.027501284801104697
+      },
+      {
+        "ordinal": 934,
+        "sim_time": 31.200001627206802,
+        "sdk_timestamp_ms": 1791730934331.0745,
+        "roi_points": 24602,
+        "centroid_shift_m": 0.02671806391737528
+      },
+      {
+        "ordinal": 935,
+        "sim_time": 31.233334962278605,
+        "sdk_timestamp_ms": 1791730934531.135,
+        "roi_points": 24523,
+        "centroid_shift_m": 0.025794735339337134
+      },
+      {
+        "ordinal": 936,
+        "sim_time": 31.266668297350407,
+        "sdk_timestamp_ms": 1791730934731.1938,
+        "roi_points": 24763,
+        "centroid_shift_m": 0.025701293576291796
+      },
+      {
+        "ordinal": 937,
+        "sim_time": 31.30000163242221,
+        "sdk_timestamp_ms": 1791730934997.9414,
+        "roi_points": 24695,
+        "centroid_shift_m": 0.02482324514595109
+      },
+      {
+        "ordinal": 938,
+        "sim_time": 31.33333496749401,
+        "sdk_timestamp_ms": 1791730935164.6646,
+        "roi_points": 24630,
+        "centroid_shift_m": 0.025700524051376926
+      },
+      {
+        "ordinal": 939,
+        "sim_time": 31.366668302565813,
+        "sdk_timestamp_ms": 1791730935431.4172,
+        "roi_points": 24395,
+        "centroid_shift_m": 0.02727270373269808
+      },
+      {
+        "ordinal": 940,
+        "sim_time": 31.400001637637615,
+        "sdk_timestamp_ms": 1791730935564.7922,
+        "roi_points": 24640,
+        "centroid_shift_m": 0.02775632191608524
+      },
+      {
+        "ordinal": 941,
+        "sim_time": 31.433334972709417,
+        "sdk_timestamp_ms": 1791730935831.5383,
+        "roi_points": 24758,
+        "centroid_shift_m": 0.027308604977204987
+      },
+      {
+        "ordinal": 942,
+        "sim_time": 31.46666830778122,
+        "sdk_timestamp_ms": 1791730936065.1653,
+        "roi_points": 24598,
+        "centroid_shift_m": 0.02767376639949449
+      },
+      {
+        "ordinal": 943,
+        "sim_time": 31.50000164285302,
+        "sdk_timestamp_ms": 1791730936265.5098,
+        "roi_points": 24862,
+        "centroid_shift_m": 0.027389154662855852
+      },
+      {
+        "ordinal": 944,
+        "sim_time": 31.533334977924824,
+        "sdk_timestamp_ms": 1791730936432.478,
+        "roi_points": 24758,
+        "centroid_shift_m": 0.028409887010595523
+      },
+      {
+        "ordinal": 945,
+        "sim_time": 31.566668312996626,
+        "sdk_timestamp_ms": 1791730936766.4507,
+        "roi_points": 24265,
+        "centroid_shift_m": 0.030783133938905246
+      },
+      {
+        "ordinal": 946,
+        "sim_time": 31.600001648068428,
+        "sdk_timestamp_ms": 1791730936900.0532,
+        "roi_points": 24322,
+        "centroid_shift_m": 0.029951963247424437
+      },
+      {
+        "ordinal": 947,
+        "sim_time": 31.63333498314023,
+        "sdk_timestamp_ms": 1791730937133.6143,
+        "roi_points": 24257,
+        "centroid_shift_m": 0.029920210568041446
+      },
+      {
+        "ordinal": 948,
+        "sim_time": 31.666668318212032,
+        "sdk_timestamp_ms": 1791730937333.8152,
+        "roi_points": 24414,
+        "centroid_shift_m": 0.028871641992316163
+      },
+      {
+        "ordinal": 949,
+        "sim_time": 31.700001653283834,
+        "sdk_timestamp_ms": 1791730937634.1213,
+        "roi_points": 24740,
+        "centroid_shift_m": 0.02902587121361438
+      },
+      {
+        "ordinal": 950,
+        "sim_time": 31.733334988355637,
+        "sdk_timestamp_ms": 1791730937800.962,
+        "roi_points": 24505,
+        "centroid_shift_m": 0.03011938785707559
+      },
+      {
+        "ordinal": 951,
+        "sim_time": 31.76666832342744,
+        "sdk_timestamp_ms": 1791730938034.527,
+        "roi_points": 24669,
+        "centroid_shift_m": 0.029531129027060884
+      },
+      {
+        "ordinal": 952,
+        "sim_time": 31.80000165849924,
+        "sdk_timestamp_ms": 1791730938201.355,
+        "roi_points": 24386,
+        "centroid_shift_m": 0.029976802158936125
+      },
+      {
+        "ordinal": 953,
+        "sim_time": 31.833334993571043,
+        "sdk_timestamp_ms": 1791730938468.2825,
+        "roi_points": 24944,
+        "centroid_shift_m": 0.02649674916442119
+      },
+      {
+        "ordinal": 954,
+        "sim_time": 31.866668328642845,
+        "sdk_timestamp_ms": 1791730938701.8494,
+        "roi_points": 25124,
+        "centroid_shift_m": 0.02391444219162103
+      },
+      {
+        "ordinal": 955,
+        "sim_time": 31.900001663714647,
+        "sdk_timestamp_ms": 1791730938902.0515,
+        "roi_points": 24903,
+        "centroid_shift_m": 0.024769341819175478
+      },
+      {
+        "ordinal": 956,
+        "sim_time": 31.93333499878645,
+        "sdk_timestamp_ms": 1791730939068.803,
+        "roi_points": 25177,
+        "centroid_shift_m": 0.02407127614965554
+      },
+      {
+        "ordinal": 957,
+        "sim_time": 31.96666833385825,
+        "sdk_timestamp_ms": 1791730939368.9492,
+        "roi_points": 25132,
+        "centroid_shift_m": 0.026718917269342536
+      },
+      {
+        "ordinal": 958,
+        "sim_time": 32.000001668930054,
+        "sdk_timestamp_ms": 1791730939535.6968,
+        "roi_points": 25135,
+        "centroid_shift_m": 0.02596708192603568
+      },
+      {
+        "ordinal": 959,
+        "sim_time": 32.033335004001856,
+        "sdk_timestamp_ms": 1791730939735.793,
+        "roi_points": 24927,
+        "centroid_shift_m": 0.02612590195468224
+      },
+      {
+        "ordinal": 960,
+        "sim_time": 32.06666833907366,
+        "sdk_timestamp_ms": 1791730939935.8877,
+        "roi_points": 24887,
+        "centroid_shift_m": 0.026957934660413987
+      },
+      {
+        "ordinal": 961,
+        "sim_time": 32.10000167414546,
+        "sdk_timestamp_ms": 1791730940202.6829,
+        "roi_points": 24999,
+        "centroid_shift_m": 0.027640086826018682
+      },
+      {
+        "ordinal": 962,
+        "sim_time": 32.13333500921726,
+        "sdk_timestamp_ms": 1791730940369.428,
+        "roi_points": 24762,
+        "centroid_shift_m": 0.027824528018562236
+      },
+      {
+        "ordinal": 963,
+        "sim_time": 32.166668344289064,
+        "sdk_timestamp_ms": 1791730940602.8713,
+        "roi_points": 24946,
+        "centroid_shift_m": 0.026897872221465582
+      },
+      {
+        "ordinal": 964,
+        "sim_time": 32.20000167936087,
+        "sdk_timestamp_ms": 1791730940769.6147,
+        "roi_points": 24739,
+        "centroid_shift_m": 0.028573985098906077
+      },
+      {
+        "ordinal": 965,
+        "sim_time": 32.23333501443267,
+        "sdk_timestamp_ms": 1791730941036.409,
+        "roi_points": 24740,
+        "centroid_shift_m": 0.028848605317663513
+      },
+      {
+        "ordinal": 966,
+        "sim_time": 32.26666834950447,
+        "sdk_timestamp_ms": 1791730941269.8557,
+        "roi_points": 24927,
+        "centroid_shift_m": 0.029078798589832745
+      },
+      {
+        "ordinal": 967,
+        "sim_time": 32.30000168457627,
+        "sdk_timestamp_ms": 1791730941469.953,
+        "roi_points": 25054,
+        "centroid_shift_m": 0.028607759167935516
+      },
+      {
+        "ordinal": 968,
+        "sim_time": 32.333335019648075,
+        "sdk_timestamp_ms": 1791730941636.699,
+        "roi_points": 24677,
+        "centroid_shift_m": 0.0280779407496852
+      },
+      {
+        "ordinal": 969,
+        "sim_time": 32.36666835471988,
+        "sdk_timestamp_ms": 1791730941936.8425,
+        "roi_points": 24976,
+        "centroid_shift_m": 0.02749007536286931
+      },
+      {
+        "ordinal": 970,
+        "sim_time": 32.40000168979168,
+        "sdk_timestamp_ms": 1791730942103.5906,
+        "roi_points": 25019,
+        "centroid_shift_m": 0.02652130861746604
+      },
+      {
+        "ordinal": 971,
+        "sim_time": 32.43333502486348,
+        "sdk_timestamp_ms": 1791730942303.6885,
+        "roi_points": 25019,
+        "centroid_shift_m": 0.025733988010202356
+      },
+      {
+        "ordinal": 972,
+        "sim_time": 32.466668359935284,
+        "sdk_timestamp_ms": 1791730942503.785,
+        "roi_points": 25426,
+        "centroid_shift_m": 0.023594325906568812
+      },
+      {
+        "ordinal": 973,
+        "sim_time": 32.500001695007086,
+        "sdk_timestamp_ms": 1791730942803.9292,
+        "roi_points": 25492,
+        "centroid_shift_m": 0.02162135097718073
+      },
+      {
+        "ordinal": 974,
+        "sim_time": 32.53333503007889,
+        "sdk_timestamp_ms": 1791730942937.3254,
+        "roi_points": 25476,
+        "centroid_shift_m": 0.021380584002775368
+      },
+      {
+        "ordinal": 975,
+        "sim_time": 32.56666836515069,
+        "sdk_timestamp_ms": 1791730943204.1218,
+        "roi_points": 25316,
+        "centroid_shift_m": 0.02264189014592852
+      },
+      {
+        "ordinal": 976,
+        "sim_time": 32.60000170022249,
+        "sdk_timestamp_ms": 1791730943370.8677,
+        "roi_points": 25321,
+        "centroid_shift_m": 0.023919639717712177
+      },
+      {
+        "ordinal": 977,
+        "sim_time": 32.633335035294294,
+        "sdk_timestamp_ms": 1791730943637.6611,
+        "roi_points": 25496,
+        "centroid_shift_m": 0.02173622930617772
+      },
+      {
+        "ordinal": 978,
+        "sim_time": 32.6666683703661,
+        "sdk_timestamp_ms": 1791730943871.1033,
+        "roi_points": 25691,
+        "centroid_shift_m": 0.02136776875284266
+      },
+      {
+        "ordinal": 979,
+        "sim_time": 32.7000017054379,
+        "sdk_timestamp_ms": 1791730944071.204,
+        "roi_points": 25342,
+        "centroid_shift_m": 0.022024840932006243
+      },
+      {
+        "ordinal": 980,
+        "sim_time": 32.7333350405097,
+        "sdk_timestamp_ms": 1791730944204.6057,
+        "roi_points": 25647,
+        "centroid_shift_m": 0.022982236571764337
+      },
+      {
+        "ordinal": 981,
+        "sim_time": 32.7666683755815,
+        "sdk_timestamp_ms": 1791730944538.1072,
+        "roi_points": 25525,
+        "centroid_shift_m": 0.02240189187947122
+      },
+      {
+        "ordinal": 982,
+        "sim_time": 32.800001710653305,
+        "sdk_timestamp_ms": 1791730944704.8567,
+        "roi_points": 25400,
+        "centroid_shift_m": 0.023238886608993235
+      },
+      {
+        "ordinal": 983,
+        "sim_time": 32.83333504572511,
+        "sdk_timestamp_ms": 1791730944904.9568,
+        "roi_points": 24989,
+        "centroid_shift_m": 0.02479976074555239
+      },
+      {
+        "ordinal": 984,
+        "sim_time": 32.86666838079691,
+        "sdk_timestamp_ms": 1791730945105.0557,
+        "roi_points": 24967,
+        "centroid_shift_m": 0.02514302404871189
+      },
+      {
+        "ordinal": 985,
+        "sim_time": 32.90000171586871,
+        "sdk_timestamp_ms": 1791730945371.8516,
+        "roi_points": 24862,
+        "centroid_shift_m": 0.027159394324122916
+      },
+      {
+        "ordinal": 986,
+        "sim_time": 32.933335050940514,
+        "sdk_timestamp_ms": 1791730945538.5989,
+        "roi_points": 25134,
+        "centroid_shift_m": 0.026263931600467715
+      },
+      {
+        "ordinal": 987,
+        "sim_time": 32.966668386012316,
+        "sdk_timestamp_ms": 1791730945772.0432,
+        "roi_points": 24848,
+        "centroid_shift_m": 0.025452413701880304
+      },
+      {
+        "ordinal": 988,
+        "sim_time": 33.00000172108412,
+        "sdk_timestamp_ms": 1791730945938.79,
+        "roi_points": 25142,
+        "centroid_shift_m": 0.02515716615333444
+      },
+      {
+        "ordinal": 989,
+        "sim_time": 33.03333505615592,
+        "sdk_timestamp_ms": 1791730946205.5874,
+        "roi_points": 25408,
+        "centroid_shift_m": 0.02358414136115126
+      },
+      {
+        "ordinal": 990,
+        "sim_time": 33.06666839122772,
+        "sdk_timestamp_ms": 1791730946439.035,
+        "roi_points": 25141,
+        "centroid_shift_m": 0.024077460776340712
+      },
+      {
+        "ordinal": 991,
+        "sim_time": 33.100001726299524,
+        "sdk_timestamp_ms": 1791730946639.1309,
+        "roi_points": 25430,
+        "centroid_shift_m": 0.023789808786018846
+      },
+      {
+        "ordinal": 992,
+        "sim_time": 33.133335061371326,
+        "sdk_timestamp_ms": 1791730946805.8777,
+        "roi_points": 25720,
+        "centroid_shift_m": 0.022553900489227334
+      },
+      {
+        "ordinal": 993,
+        "sim_time": 33.16666839644313,
+        "sdk_timestamp_ms": 1791730947106.0242,
+        "roi_points": 25464,
+        "centroid_shift_m": 0.023324932048429656
+      },
+      {
+        "ordinal": 994,
+        "sim_time": 33.20000173151493,
+        "sdk_timestamp_ms": 1791730947272.773,
+        "roi_points": 25547,
+        "centroid_shift_m": 0.022949256500358024
+      },
+      {
+        "ordinal": 995,
+        "sim_time": 33.23333506658673,
+        "sdk_timestamp_ms": 1791730947506.2195,
+        "roi_points": 25523,
+        "centroid_shift_m": 0.02267500930087651
+      },
+      {
+        "ordinal": 996,
+        "sim_time": 33.266668401658535,
+        "sdk_timestamp_ms": 1791730947706.3164,
+        "roi_points": 25512,
+        "centroid_shift_m": 0.02245448897287446
+      },
+      {
+        "ordinal": 997,
+        "sim_time": 33.30000173673034,
+        "sdk_timestamp_ms": 1791730948006.4875,
+        "roi_points": 25452,
+        "centroid_shift_m": 0.023142425075680838
+      },
+      {
+        "ordinal": 998,
+        "sim_time": 33.33333507180214,
+        "sdk_timestamp_ms": 1791730948173.2847,
+        "roi_points": 25490,
+        "centroid_shift_m": 0.02295507647836393
+      },
+      {
+        "ordinal": 999,
+        "sim_time": 33.36666840687394,
+        "sdk_timestamp_ms": 1791730948440.1606,
+        "roi_points": 25523,
+        "centroid_shift_m": 0.022403020877297928
+      },
+      {
+        "ordinal": 1000,
+        "sim_time": 33.400001741945744,
+        "sdk_timestamp_ms": 1791730948606.96,
+        "roi_points": 25400,
+        "centroid_shift_m": 0.02159523716505368
+      },
+      {
+        "ordinal": 1001,
+        "sim_time": 33.433335077017546,
+        "sdk_timestamp_ms": 1791730948873.8398,
+        "roi_points": 25226,
+        "centroid_shift_m": 0.021983244313018038
+      },
+      {
+        "ordinal": 1002,
+        "sim_time": 33.46666841208935,
+        "sdk_timestamp_ms": 1791730949107.2961,
+        "roi_points": 25482,
+        "centroid_shift_m": 0.020653026023014453
+      },
+      {
+        "ordinal": 1003,
+        "sim_time": 33.50000174716115,
+        "sdk_timestamp_ms": 1791730949307.3882,
+        "roi_points": 25598,
+        "centroid_shift_m": 0.019196407579680923
+      },
+      {
+        "ordinal": 1004,
+        "sim_time": 33.53333508223295,
+        "sdk_timestamp_ms": 1791730949474.1316,
+        "roi_points": 25413,
+        "centroid_shift_m": 0.020108266530310535
+      },
+      {
+        "ordinal": 1005,
+        "sim_time": 33.566668417304754,
+        "sdk_timestamp_ms": 1791730949774.2666,
+        "roi_points": 25246,
+        "centroid_shift_m": 0.021230433160877634
+      },
+      {
+        "ordinal": 1006,
+        "sim_time": 33.600001752376556,
+        "sdk_timestamp_ms": 1791730949941.0085,
+        "roi_points": 25425,
+        "centroid_shift_m": 0.020827921327220642
+      },
+      {
+        "ordinal": 1007,
+        "sim_time": 33.63333508744836,
+        "sdk_timestamp_ms": 1791730950141.0996,
+        "roi_points": 25424,
+        "centroid_shift_m": 0.02147444760983103
+      },
+      {
+        "ordinal": 1008,
+        "sim_time": 33.66666842252016,
+        "sdk_timestamp_ms": 1791730950341.1907,
+        "roi_points": 25444,
+        "centroid_shift_m": 0.021470527510463078
+      },
+      {
+        "ordinal": 1009,
+        "sim_time": 33.70000175759196,
+        "sdk_timestamp_ms": 1791730950607.9758,
+        "roi_points": 25351,
+        "centroid_shift_m": 0.020612836847673833
+      },
+      {
+        "ordinal": 1010,
+        "sim_time": 33.733335092663765,
+        "sdk_timestamp_ms": 1791730950774.7163,
+        "roi_points": 25382,
+        "centroid_shift_m": 0.0182297220114194
+      },
+      {
+        "ordinal": 1011,
+        "sim_time": 33.76666842773557,
+        "sdk_timestamp_ms": 1791730951008.155,
+        "roi_points": 25553,
+        "centroid_shift_m": 0.01728069081258744
+      },
+      {
+        "ordinal": 1012,
+        "sim_time": 33.80000176280737,
+        "sdk_timestamp_ms": 1791730951174.9019,
+        "roi_points": 25433,
+        "centroid_shift_m": 0.016275129470535013
+      },
+      {
+        "ordinal": 1013,
+        "sim_time": 33.83333509787917,
+        "sdk_timestamp_ms": 1791730951441.6946,
+        "roi_points": 25903,
+        "centroid_shift_m": 0.015377970652660743
+      },
+      {
+        "ordinal": 1014,
+        "sim_time": 33.86666843295097,
+        "sdk_timestamp_ms": 1791730951641.7886,
+        "roi_points": 26051,
+        "centroid_shift_m": 0.016093677712215367
+      },
+      {
+        "ordinal": 1015,
+        "sim_time": 33.900001768022776,
+        "sdk_timestamp_ms": 1791730951841.8806,
+        "roi_points": 25659,
+        "centroid_shift_m": 0.017387290447904203
+      },
+      {
+        "ordinal": 1016,
+        "sim_time": 33.93333510309458,
+        "sdk_timestamp_ms": 1791730951975.2815,
+        "roi_points": 25479,
+        "centroid_shift_m": 0.018467466823751454
+      },
+      {
+        "ordinal": 1017,
+        "sim_time": 33.96666843816638,
+        "sdk_timestamp_ms": 1791730952275.4482,
+        "roi_points": 25431,
+        "centroid_shift_m": 0.019526441348833273
+      },
+      {
+        "ordinal": 1018,
+        "sim_time": 34.00000177323818,
+        "sdk_timestamp_ms": 1791730952442.2075,
+        "roi_points": 25400,
+        "centroid_shift_m": 0.02049644741823082
+      },
+      {
+        "ordinal": 1019,
+        "sim_time": 34.033335108309984,
+        "sdk_timestamp_ms": 1791730952642.3184,
+        "roi_points": 25663,
+        "centroid_shift_m": 0.02074454311396476
+      },
+      {
+        "ordinal": 1020,
+        "sim_time": 34.066668443381786,
+        "sdk_timestamp_ms": 1791730952842.4277,
+        "roi_points": 25735,
+        "centroid_shift_m": 0.02078702565524836
+      },
+      {
+        "ordinal": 1021,
+        "sim_time": 34.10000177845359,
+        "sdk_timestamp_ms": 1791730953109.271,
+        "roi_points": 25757,
+        "centroid_shift_m": 0.020768259387656925
+      },
+      {
+        "ordinal": 1022,
+        "sim_time": 34.13333511352539,
+        "sdk_timestamp_ms": 1791730953276.0562,
+        "roi_points": 25541,
+        "centroid_shift_m": 0.020925582767436026
+      },
+      {
+        "ordinal": 1023,
+        "sim_time": 34.16666844859719,
+        "sdk_timestamp_ms": 1791730953542.9175,
+        "roi_points": 25937,
+        "centroid_shift_m": 0.020461643998289574
+      },
+      {
+        "ordinal": 1024,
+        "sim_time": 34.200001783668995,
+        "sdk_timestamp_ms": 1791730953709.707,
+        "roi_points": 25492,
+        "centroid_shift_m": 0.02221084612441744
+      },
+      {
+        "ordinal": 1025,
+        "sim_time": 34.2333351187408,
+        "sdk_timestamp_ms": 1791730953976.5728,
+        "roi_points": 26275,
+        "centroid_shift_m": 0.019660308594398428
+      },
+      {
+        "ordinal": 1026,
+        "sim_time": 34.2666684538126,
+        "sdk_timestamp_ms": 1791730954176.718,
+        "roi_points": 26182,
+        "centroid_shift_m": 0.0198843546336709
+      },
+      {
+        "ordinal": 1027,
+        "sim_time": 34.3000017888844,
+        "sdk_timestamp_ms": 1791730954343.5088,
+        "roi_points": 26078,
+        "centroid_shift_m": 0.01865169082509897
+      },
+      {
+        "ordinal": 1028,
+        "sim_time": 34.3333351239562,
+        "sdk_timestamp_ms": 1791730954510.3003,
+        "roi_points": 25959,
+        "centroid_shift_m": 0.018227102686763752
+      },
+      {
+        "ordinal": 1029,
+        "sim_time": 34.366668459028006,
+        "sdk_timestamp_ms": 1791730954810.5317,
+        "roi_points": 26384,
+        "centroid_shift_m": 0.017836847266336997
+      },
+      {
+        "ordinal": 1030,
+        "sim_time": 34.40000179409981,
+        "sdk_timestamp_ms": 1791730954943.9607,
+        "roi_points": 26135,
+        "centroid_shift_m": 0.017910910872606708
+      },
+      {
+        "ordinal": 1031,
+        "sim_time": 34.43333512917161,
+        "sdk_timestamp_ms": 1791730955144.0688,
+        "roi_points": 25972,
+        "centroid_shift_m": 0.01777412633989617
+      },
+      {
+        "ordinal": 1032,
+        "sim_time": 34.46666846424341,
+        "sdk_timestamp_ms": 1791730955344.177,
+        "roi_points": 25601,
+        "centroid_shift_m": 0.020193429757105318
+      },
+      {
+        "ordinal": 1033,
+        "sim_time": 34.500001799315214,
+        "sdk_timestamp_ms": 1791730955610.986,
+        "roi_points": 26039,
+        "centroid_shift_m": 0.01825615658597177
+      },
+      {
+        "ordinal": 1034,
+        "sim_time": 34.533335134387016,
+        "sdk_timestamp_ms": 1791730955777.742,
+        "roi_points": 25920,
+        "centroid_shift_m": 0.019141712825658106
+      },
+      {
+        "ordinal": 1035,
+        "sim_time": 34.56666846945882,
+        "sdk_timestamp_ms": 1791730956011.2004,
+        "roi_points": 25640,
+        "centroid_shift_m": 0.019043799816813232
+      },
+      {
+        "ordinal": 1036,
+        "sim_time": 34.60000180453062,
+        "sdk_timestamp_ms": 1791730956177.9585,
+        "roi_points": 25632,
+        "centroid_shift_m": 0.020473478299617508
+      },
+      {
+        "ordinal": 1037,
+        "sim_time": 34.63333513960242,
+        "sdk_timestamp_ms": 1791730956444.7698,
+        "roi_points": 25694,
+        "centroid_shift_m": 0.019184868484015082
+      },
+      {
+        "ordinal": 1038,
+        "sim_time": 34.666668474674225,
+        "sdk_timestamp_ms": 1791730956644.8784,
+        "roi_points": 26060,
+        "centroid_shift_m": 0.019235564258492627
+      },
+      {
+        "ordinal": 1039,
+        "sim_time": 34.70000180974603,
+        "sdk_timestamp_ms": 1791730956844.9858,
+        "roi_points": 25786,
+        "centroid_shift_m": 0.019547319131505772
+      },
+      {
+        "ordinal": 1040,
+        "sim_time": 34.73333514481783,
+        "sdk_timestamp_ms": 1791730956978.391,
+        "roi_points": 25898,
+        "centroid_shift_m": 0.019113792443103923
+      },
+      {
+        "ordinal": 1041,
+        "sim_time": 34.76666847988963,
+        "sdk_timestamp_ms": 1791730957278.5505,
+        "roi_points": 25759,
+        "centroid_shift_m": 0.01924981560272525
+      },
+      {
+        "ordinal": 1042,
+        "sim_time": 34.80000181496143,
+        "sdk_timestamp_ms": 1791730957445.306,
+        "roi_points": 25612,
+        "centroid_shift_m": 0.02029481483328418
+      },
+      {
+        "ordinal": 1043,
+        "sim_time": 34.833335150033236,
+        "sdk_timestamp_ms": 1791730957612.06,
+        "roi_points": 25523,
+        "centroid_shift_m": 0.021098988629365253
+      },
+      {
+        "ordinal": 1044,
+        "sim_time": 34.86666848510504,
+        "sdk_timestamp_ms": 1791730957812.1658,
+        "roi_points": 25442,
+        "centroid_shift_m": 0.021128838895062108
+      },
+      {
+        "ordinal": 1045,
+        "sim_time": 34.90000182017684,
+        "sdk_timestamp_ms": 1791730958078.9739,
+        "roi_points": 25614,
+        "centroid_shift_m": 0.020313540692004035
+      },
+      {
+        "ordinal": 1046,
+        "sim_time": 34.93333515524864,
+        "sdk_timestamp_ms": 1791730958212.379,
+        "roi_points": 25870,
+        "centroid_shift_m": 0.01917660183209726
+      },
+      {
+        "ordinal": 1047,
+        "sim_time": 34.966668490320444,
+        "sdk_timestamp_ms": 1791730958445.8372,
+        "roi_points": 25825,
+        "centroid_shift_m": 0.02123657709210057
+      },
+      {
+        "ordinal": 1048,
+        "sim_time": 35.000001825392246,
+        "sdk_timestamp_ms": 1791730958579.2407,
+        "roi_points": 25662,
+        "centroid_shift_m": 0.021464192845022677
+      },
+      {
+        "ordinal": 1049,
+        "sim_time": 35.03333516046405,
+        "sdk_timestamp_ms": 1791730958812.698,
+        "roi_points": 25856,
+        "centroid_shift_m": 0.020745559647014657
+      },
+      {
+        "ordinal": 1050,
+        "sim_time": 35.06666849553585,
+        "sdk_timestamp_ms": 1791730959012.8037,
+        "roi_points": 25701,
+        "centroid_shift_m": 0.02083690049779676
+      },
+      {
+        "ordinal": 1051,
+        "sim_time": 35.10000183060765,
+        "sdk_timestamp_ms": 1791730959212.9106,
+        "roi_points": 25698,
+        "centroid_shift_m": 0.02054829994665208
+      },
+      {
+        "ordinal": 1052,
+        "sim_time": 35.133335165679455,
+        "sdk_timestamp_ms": 1791730959346.315,
+        "roi_points": 25738,
+        "centroid_shift_m": 0.020069462380824608
+      },
+      {
+        "ordinal": 1053,
+        "sim_time": 35.16666850075126,
+        "sdk_timestamp_ms": 1791730959646.473,
+        "roi_points": 25951,
+        "centroid_shift_m": 0.020247312704911313
+      },
+      {
+        "ordinal": 1054,
+        "sim_time": 35.20000183582306,
+        "sdk_timestamp_ms": 1791730959779.8765,
+        "roi_points": 26210,
+        "centroid_shift_m": 0.018333418033068913
+      },
+      {
+        "ordinal": 1055,
+        "sim_time": 35.23333517089486,
+        "sdk_timestamp_ms": 1791730959946.6304,
+        "roi_points": 25749,
+        "centroid_shift_m": 0.020004684949270782
+      },
+      {
+        "ordinal": 1056,
+        "sim_time": 35.26666850596666,
+        "sdk_timestamp_ms": 1791730960146.7388,
+        "roi_points": 25864,
+        "centroid_shift_m": 0.019944952796024634
+      },
+      {
+        "ordinal": 1057,
+        "sim_time": 35.300001841038465,
+        "sdk_timestamp_ms": 1791730960380.1968,
+        "roi_points": 25803,
+        "centroid_shift_m": 0.019874100341066632
+      },
+      {
+        "ordinal": 1058,
+        "sim_time": 35.33333517611027,
+        "sdk_timestamp_ms": 1791730960513.6018,
+        "roi_points": 25815,
+        "centroid_shift_m": 0.019286372208076705
+      },
+      {
+        "ordinal": 1059,
+        "sim_time": 35.36666851118207,
+        "sdk_timestamp_ms": 1791730960747.0593,
+        "roi_points": 25796,
+        "centroid_shift_m": 0.02042348711329453
+      },
+      {
+        "ordinal": 1060,
+        "sim_time": 35.40000184625387,
+        "sdk_timestamp_ms": 1791730960880.464,
+        "roi_points": 25902,
+        "centroid_shift_m": 0.0202356489428109
+      },
+      {
+        "ordinal": 1061,
+        "sim_time": 35.433335181325674,
+        "sdk_timestamp_ms": 1791730961113.924,
+        "roi_points": 25811,
+        "centroid_shift_m": 0.020105839919572252
+      },
+      {
+        "ordinal": 1062,
+        "sim_time": 35.466668516397476,
+        "sdk_timestamp_ms": 1791730961314.0312,
+        "roi_points": 26160,
+        "centroid_shift_m": 0.019308265145078468
+      },
+      {
+        "ordinal": 1063,
+        "sim_time": 35.50000185146928,
+        "sdk_timestamp_ms": 1791730961480.7876,
+        "roi_points": 25789,
+        "centroid_shift_m": 0.01934725550361325
+      },
+      {
+        "ordinal": 1064,
+        "sim_time": 35.53333518654108,
+        "sdk_timestamp_ms": 1791730961614.1917,
+        "roi_points": 25721,
+        "centroid_shift_m": 0.02007585346429376
+      },
+      {
+        "ordinal": 1065,
+        "sim_time": 35.56666852161288,
+        "sdk_timestamp_ms": 1791730961914.3528,
+        "roi_points": 25919,
+        "centroid_shift_m": 0.020215873818657006
+      },
+      {
+        "ordinal": 1066,
+        "sim_time": 35.600001856684685,
+        "sdk_timestamp_ms": 1791730962047.7566,
+        "roi_points": 25777,
+        "centroid_shift_m": 0.019935162725821545
+      },
+      {
+        "ordinal": 1067,
+        "sim_time": 35.63333519175649,
+        "sdk_timestamp_ms": 1791730962214.5127,
+        "roi_points": 25735,
+        "centroid_shift_m": 0.020143591399976075
+      },
+      {
+        "ordinal": 1068,
+        "sim_time": 35.66666852682829,
+        "sdk_timestamp_ms": 1791730962381.2686,
+        "roi_points": 25841,
+        "centroid_shift_m": 0.020418804932677337
+      },
+      {
+        "ordinal": 1069,
+        "sim_time": 35.70000186190009,
+        "sdk_timestamp_ms": 1791730962648.0762,
+        "roi_points": 25754,
+        "centroid_shift_m": 0.02160620710521464
+      },
+      {
+        "ordinal": 1070,
+        "sim_time": 35.73333519697189,
+        "sdk_timestamp_ms": 1791730962781.4802,
+        "roi_points": 26150,
+        "centroid_shift_m": 0.0203941627766261
+      },
+      {
+        "ordinal": 1071,
+        "sim_time": 35.766668532043695,
+        "sdk_timestamp_ms": 1791730963014.9375,
+        "roi_points": 26079,
+        "centroid_shift_m": 0.020580122084630486
+      },
+      {
+        "ordinal": 1072,
+        "sim_time": 35.8000018671155,
+        "sdk_timestamp_ms": 1791730963148.343,
+        "roi_points": 25794,
+        "centroid_shift_m": 0.019671667496586196
+      },
+      {
+        "ordinal": 1073,
+        "sim_time": 35.8333352021873,
+        "sdk_timestamp_ms": 1791730963381.8013,
+        "roi_points": 26048,
+        "centroid_shift_m": 0.020388469946634354
+      },
+      {
+        "ordinal": 1074,
+        "sim_time": 35.8666685372591,
+        "sdk_timestamp_ms": 1791730963548.5576,
+        "roi_points": 25857,
+        "centroid_shift_m": 0.021042975867807907
+      },
+      {
+        "ordinal": 1075,
+        "sim_time": 35.900001872330904,
+        "sdk_timestamp_ms": 1791730963715.3135,
+        "roi_points": 25710,
+        "centroid_shift_m": 0.020189805105795714
+      },
+      {
+        "ordinal": 1076,
+        "sim_time": 35.933335207402706,
+        "sdk_timestamp_ms": 1791730963848.7173,
+        "roi_points": 25640,
+        "centroid_shift_m": 0.020033427281585553
+      },
+      {
+        "ordinal": 1077,
+        "sim_time": 35.96666854247451,
+        "sdk_timestamp_ms": 1791730964148.9182,
+        "roi_points": 25679,
+        "centroid_shift_m": 0.02066203726085022
+      },
+      {
+        "ordinal": 1078,
+        "sim_time": 36.00000187754631,
+        "sdk_timestamp_ms": 1791730964282.344,
+        "roi_points": 25833,
+        "centroid_shift_m": 0.020282849457997618
+      },
+      {
+        "ordinal": 1079,
+        "sim_time": 36.03333521261811,
+        "sdk_timestamp_ms": 1791730964449.129,
+        "roi_points": 25654,
+        "centroid_shift_m": 0.020140909603846922
+      },
+      {
+        "ordinal": 1080,
+        "sim_time": 36.066668547689915,
+        "sdk_timestamp_ms": 1791730964649.2727,
+        "roi_points": 25558,
+        "centroid_shift_m": 0.02057796958701055
+      },
+      {
+        "ordinal": 1081,
+        "sim_time": 36.10000188276172,
+        "sdk_timestamp_ms": 1791730964882.7751,
+        "roi_points": 25981,
+        "centroid_shift_m": 0.02181308154937991
+      },
+      {
+        "ordinal": 1082,
+        "sim_time": 36.13333521783352,
+        "sdk_timestamp_ms": 1791730965016.1855,
+        "roi_points": 25956,
+        "centroid_shift_m": 0.023069124217543188
+      },
+      {
+        "ordinal": 1083,
+        "sim_time": 36.16666855290532,
+        "sdk_timestamp_ms": 1791730965249.6504,
+        "roi_points": 26246,
+        "centroid_shift_m": 0.021996157920214237
+      },
+      {
+        "ordinal": 1084,
+        "sim_time": 36.20000188797712,
+        "sdk_timestamp_ms": 1791730965383.0593,
+        "roi_points": 26060,
+        "centroid_shift_m": 0.022470397496925382
+      },
+      {
+        "ordinal": 1085,
+        "sim_time": 36.233335223048925,
+        "sdk_timestamp_ms": 1791730965649.876,
+        "roi_points": 25878,
+        "centroid_shift_m": 0.021949962170673198
+      },
+      {
+        "ordinal": 1086,
+        "sim_time": 36.26666855812073,
+        "sdk_timestamp_ms": 1791730965816.637,
+        "roi_points": 25813,
+        "centroid_shift_m": 0.022068095928181115
+      },
+      {
+        "ordinal": 1087,
+        "sim_time": 36.30000189319253,
+        "sdk_timestamp_ms": 1791730965983.397,
+        "roi_points": 25959,
+        "centroid_shift_m": 0.021369028296426566
+      },
+      {
+        "ordinal": 1088,
+        "sim_time": 36.33333522826433,
+        "sdk_timestamp_ms": 1791730966150.1553,
+        "roi_points": 25746,
+        "centroid_shift_m": 0.022759027431316664
+      },
+      {
+        "ordinal": 1089,
+        "sim_time": 36.366668563336134,
+        "sdk_timestamp_ms": 1791730966416.9697,
+        "roi_points": 25588,
+        "centroid_shift_m": 0.022300438265164212
+      },
+      {
+        "ordinal": 1090,
+        "sim_time": 36.400001898407936,
+        "sdk_timestamp_ms": 1791730966550.376,
+        "roi_points": 25745,
+        "centroid_shift_m": 0.023430744426875542
+      },
+      {
+        "ordinal": 1091,
+        "sim_time": 36.43333523347974,
+        "sdk_timestamp_ms": 1791730966750.4866,
+        "roi_points": 26196,
+        "centroid_shift_m": 0.02485090150168588
+      },
+      {
+        "ordinal": 1092,
+        "sim_time": 36.46666856855154,
+        "sdk_timestamp_ms": 1791730966917.2444,
+        "roi_points": 25934,
+        "centroid_shift_m": 0.024672852206896547
+      },
+      {
+        "ordinal": 1093,
+        "sim_time": 36.50000190362334,
+        "sdk_timestamp_ms": 1791730967184.0654,
+        "roi_points": 26201,
+        "centroid_shift_m": 0.025254921150322126
+      },
+      {
+        "ordinal": 1094,
+        "sim_time": 36.533335238695145,
+        "sdk_timestamp_ms": 1791730967317.4758,
+        "roi_points": 26541,
+        "centroid_shift_m": 0.02478656891201485
+      },
+      {
+        "ordinal": 1095,
+        "sim_time": 36.56666857376695,
+        "sdk_timestamp_ms": 1791730967550.9429,
+        "roi_points": 26612,
+        "centroid_shift_m": 0.023914955816532715
+      },
+      {
+        "ordinal": 1096,
+        "sim_time": 36.60000190883875,
+        "sdk_timestamp_ms": 1791730967717.7058,
+        "roi_points": 26568,
+        "centroid_shift_m": 0.0241584743516648
+      },
+      {
+        "ordinal": 1097,
+        "sim_time": 36.63333524391055,
+        "sdk_timestamp_ms": 1791730967951.1753,
+        "roi_points": 26195,
+        "centroid_shift_m": 0.024620724560272176
+      },
+      {
+        "ordinal": 1098,
+        "sim_time": 36.66666857898235,
+        "sdk_timestamp_ms": 1791730968151.2996,
+        "roi_points": 25706,
+        "centroid_shift_m": 0.02398377482553539
+      },
+      {
+        "ordinal": 1099,
+        "sim_time": 36.700001914054155,
+        "sdk_timestamp_ms": 1791730968318.0693,
+        "roi_points": 25480,
+        "centroid_shift_m": 0.02350596746557066
+      },
+      {
+        "ordinal": 1100,
+        "sim_time": 36.73333524912596,
+        "sdk_timestamp_ms": 1791730968451.4863,
+        "roi_points": 25469,
+        "centroid_shift_m": 0.024664781135894435
+      },
+      {
+        "ordinal": 1101,
+        "sim_time": 36.76666858419776,
+        "sdk_timestamp_ms": 1791730968751.6746,
+        "roi_points": 25675,
+        "centroid_shift_m": 0.025653305611721352
+      },
+      {
+        "ordinal": 1102,
+        "sim_time": 36.80000191926956,
+        "sdk_timestamp_ms": 1791730968885.0925,
+        "roi_points": 25301,
+        "centroid_shift_m": 0.026380235309673584
+      },
+      {
+        "ordinal": 1103,
+        "sim_time": 36.833335254341364,
+        "sdk_timestamp_ms": 1791730969051.8577,
+        "roi_points": 25369,
+        "centroid_shift_m": 0.025003039407657864
+      },
+      {
+        "ordinal": 1104,
+        "sim_time": 36.866668589413166,
+        "sdk_timestamp_ms": 1791730969251.9744,
+        "roi_points": 25390,
+        "centroid_shift_m": 0.024935299859605544
+      },
+      {
+        "ordinal": 1105,
+        "sim_time": 36.90000192448497,
+        "sdk_timestamp_ms": 1791730969485.445,
+        "roi_points": 25729,
+        "centroid_shift_m": 0.02369912150778717
+      },
+      {
+        "ordinal": 1106,
+        "sim_time": 36.93333525955677,
+        "sdk_timestamp_ms": 1791730969618.856,
+        "roi_points": 26026,
+        "centroid_shift_m": 0.022671737289488996
+      },
+      {
+        "ordinal": 1107,
+        "sim_time": 36.96666859462857,
+        "sdk_timestamp_ms": 1791730969818.974,
+        "roi_points": 25963,
+        "centroid_shift_m": 0.02233150672365174
+      },
+      {
+        "ordinal": 1108,
+        "sim_time": 37.000001929700375,
+        "sdk_timestamp_ms": 1791730969952.385,
+        "roi_points": 26146,
+        "centroid_shift_m": 0.02138401457987701
+      },
+      {
+        "ordinal": 1109,
+        "sim_time": 37.03333526477218,
+        "sdk_timestamp_ms": 1791730970219.2026,
+        "roi_points": 26236,
+        "centroid_shift_m": 0.021553570403922383
+      },
+      {
+        "ordinal": 1110,
+        "sim_time": 37.06666859984398,
+        "sdk_timestamp_ms": 1791730970419.3167,
+        "roi_points": 26499,
+        "centroid_shift_m": 0.021365379329902602
+      },
+      {
+        "ordinal": 1111,
+        "sim_time": 37.10000193491578,
+        "sdk_timestamp_ms": 1791730970586.0771,
+        "roi_points": 26434,
+        "centroid_shift_m": 0.02217606861004959
+      },
+      {
+        "ordinal": 1112,
+        "sim_time": 37.13333526998758,
+        "sdk_timestamp_ms": 1791730970719.4863,
+        "roi_points": 26544,
+        "centroid_shift_m": 0.021256783658173753
+      },
+      {
+        "ordinal": 1113,
+        "sim_time": 37.166668605059385,
+        "sdk_timestamp_ms": 1791730971019.6562,
+        "roi_points": 26844,
+        "centroid_shift_m": 0.019529887672151823
+      },
+      {
+        "ordinal": 1114,
+        "sim_time": 37.20000194013119,
+        "sdk_timestamp_ms": 1791730971153.0657,
+        "roi_points": 27012,
+        "centroid_shift_m": 0.019050231914274036
+      },
+      {
+        "ordinal": 1115,
+        "sim_time": 37.23333527520299,
+        "sdk_timestamp_ms": 1791730971353.1797,
+        "roi_points": 27058,
+        "centroid_shift_m": 0.019619469947706813
+      },
+      {
+        "ordinal": 1116,
+        "sim_time": 37.26666861027479,
+        "sdk_timestamp_ms": 1791730971519.9404,
+        "roi_points": 27001,
+        "centroid_shift_m": 0.01982935529894016
+      },
+      {
+        "ordinal": 1117,
+        "sim_time": 37.300001945346594,
+        "sdk_timestamp_ms": 1791730971786.759,
+        "roi_points": 27068,
+        "centroid_shift_m": 0.019696029409198193
+      },
+      {
+        "ordinal": 1118,
+        "sim_time": 37.333335280418396,
+        "sdk_timestamp_ms": 1791730971920.1675,
+        "roi_points": 27093,
+        "centroid_shift_m": 0.02005694557590194
+      },
+      {
+        "ordinal": 1119,
+        "sim_time": 37.3666686154902,
+        "sdk_timestamp_ms": 1791730972153.6357,
+        "roi_points": 27198,
+        "centroid_shift_m": 0.021034119587991323
+      },
+      {
+        "ordinal": 1120,
+        "sim_time": 37.400001950562,
+        "sdk_timestamp_ms": 1791730972287.0452,
+        "roi_points": 27658,
+        "centroid_shift_m": 0.020566022972521355
+      },
+      {
+        "ordinal": 1121,
+        "sim_time": 37.4333352856338,
+        "sdk_timestamp_ms": 1791730972487.1611,
+        "roi_points": 27690,
+        "centroid_shift_m": 0.019424243534540676
+      },
+      {
+        "ordinal": 1122,
+        "sim_time": 37.466668620705605,
+        "sdk_timestamp_ms": 1791730972653.9243,
+        "roi_points": 27442,
+        "centroid_shift_m": 0.019553475158365304
+      },
+      {
+        "ordinal": 1123,
+        "sim_time": 37.50000195577741,
+        "sdk_timestamp_ms": 1791730972820.6865,
+        "roi_points": 27620,
+        "centroid_shift_m": 0.02047321685064229
+      },
+      {
+        "ordinal": 1124,
+        "sim_time": 37.53333529084921,
+        "sdk_timestamp_ms": 1791730972987.4487,
+        "roi_points": 27660,
+        "centroid_shift_m": 0.020814830716733776
+      },
+      {
+        "ordinal": 1125,
+        "sim_time": 37.56666862592101,
+        "sdk_timestamp_ms": 1791730973254.2659,
+        "roi_points": 27583,
+        "centroid_shift_m": 0.019865852430631745
+      },
+      {
+        "ordinal": 1126,
+        "sim_time": 37.60000196099281,
+        "sdk_timestamp_ms": 1791730973421.027,
+        "roi_points": 27557,
+        "centroid_shift_m": 0.019781865338947636
+      },
+      {
+        "ordinal": 1127,
+        "sim_time": 37.633335296064615,
+        "sdk_timestamp_ms": 1791730973587.7874,
+        "roi_points": 27587,
+        "centroid_shift_m": 0.01965098167574822
+      },
+      {
+        "ordinal": 1128,
+        "sim_time": 37.66666863113642,
+        "sdk_timestamp_ms": 1791730973787.9006,
+        "roi_points": 27644,
+        "centroid_shift_m": 0.01905592474452854
+      },
+      {
+        "ordinal": 1129,
+        "sim_time": 37.70000196620822,
+        "sdk_timestamp_ms": 1791730974021.3667,
+        "roi_points": 27620,
+        "centroid_shift_m": 0.020085259704084497
+      },
+      {
+        "ordinal": 1130,
+        "sim_time": 37.73333530128002,
+        "sdk_timestamp_ms": 1791730974154.7751,
+        "roi_points": 27819,
+        "centroid_shift_m": 0.019036980939059225
+      },
+      {
+        "ordinal": 1131,
+        "sim_time": 37.766668636351824,
+        "sdk_timestamp_ms": 1791730974388.242,
+        "roi_points": 27886,
+        "centroid_shift_m": 0.020375143088943528
+      },
+      {
+        "ordinal": 1132,
+        "sim_time": 37.800001971423626,
+        "sdk_timestamp_ms": 1791730974521.6504,
+        "roi_points": 28048,
+        "centroid_shift_m": 0.01978322973492877
+      },
+      {
+        "ordinal": 1133,
+        "sim_time": 37.83333530649543,
+        "sdk_timestamp_ms": 1791730974755.117,
+        "roi_points": 27999,
+        "centroid_shift_m": 0.018826425147893473
+      },
+      {
+        "ordinal": 1134,
+        "sim_time": 37.86666864156723,
+        "sdk_timestamp_ms": 1791730974955.2302,
+        "roi_points": 28128,
+        "centroid_shift_m": 0.019632329611670926
+      },
+      {
+        "ordinal": 1135,
+        "sim_time": 37.90000197663903,
+        "sdk_timestamp_ms": 1791730975121.9924,
+        "roi_points": 28314,
+        "centroid_shift_m": 0.02010796899846162
+      },
+      {
+        "ordinal": 1136,
+        "sim_time": 37.933335311710835,
+        "sdk_timestamp_ms": 1791730975255.4023,
+        "roi_points": 28020,
+        "centroid_shift_m": 0.020169154006435288
+      },
+      {
+        "ordinal": 1137,
+        "sim_time": 37.96666864678264,
+        "sdk_timestamp_ms": 1791730975555.5732,
+        "roi_points": 28133,
+        "centroid_shift_m": 0.01831035266094503
+      },
+      {
+        "ordinal": 1138,
+        "sim_time": 38.00000198185444,
+        "sdk_timestamp_ms": 1791730975688.9832,
+        "roi_points": 28790,
+        "centroid_shift_m": 0.017832541342706412
+      },
+      {
+        "ordinal": 1139,
+        "sim_time": 38.03333531692624,
+        "sdk_timestamp_ms": 1791730975889.0967,
+        "roi_points": 14262,
+        "centroid_shift_m": 0.21733370692387038
+      },
+      {
+        "ordinal": 1140,
+        "sim_time": 38.06666865199804,
+        "sdk_timestamp_ms": 1791730976022.5068,
+        "roi_points": 6169,
+        "centroid_shift_m": 0.29065637649815185
+      },
+      {
+        "ordinal": 1141,
+        "sim_time": 38.100001987069845,
+        "sdk_timestamp_ms": 1791730976222.6218,
+        "roi_points": 2493,
+        "centroid_shift_m": 0.27210813388326477
+      },
+      {
+        "ordinal": 1142,
+        "sim_time": 38.13333532214165,
+        "sdk_timestamp_ms": 1791730976322.6785,
+        "roi_points": 849,
+        "centroid_shift_m": 0.26246266905738147
+      },
+      {
+        "ordinal": 1143,
+        "sim_time": 38.16666865721345,
+        "sdk_timestamp_ms": 1791730976489.4412,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1144,
+        "sim_time": 38.20000199228525,
+        "sdk_timestamp_ms": 1791730976589.4988,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1145,
+        "sim_time": 38.233335327357054,
+        "sdk_timestamp_ms": 1791730976689.5562,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1146,
+        "sim_time": 38.266668662428856,
+        "sdk_timestamp_ms": 1791730976822.9653,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1147,
+        "sim_time": 38.30000199750066,
+        "sdk_timestamp_ms": 1791730976956.3752,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1148,
+        "sim_time": 38.33333533257246,
+        "sdk_timestamp_ms": 1791730977023.08,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1149,
+        "sim_time": 38.36666866764426,
+        "sdk_timestamp_ms": 1791730977189.8416,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1150,
+        "sim_time": 38.400002002716064,
+        "sdk_timestamp_ms": 1791730977289.899,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1151,
+        "sim_time": 38.43333533778787,
+        "sdk_timestamp_ms": 1791730977389.9563,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1152,
+        "sim_time": 38.46666867285967,
+        "sdk_timestamp_ms": 1791730977523.3662,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1153,
+        "sim_time": 38.50000200793147,
+        "sdk_timestamp_ms": 1791730977656.775,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1154,
+        "sim_time": 38.53333534300327,
+        "sdk_timestamp_ms": 1791730977723.48,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1155,
+        "sim_time": 38.566668678075075,
+        "sdk_timestamp_ms": 1791730977890.2422,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1156,
+        "sim_time": 38.60000201314688,
+        "sdk_timestamp_ms": 1791730977956.9478,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1157,
+        "sim_time": 38.63333534821868,
+        "sdk_timestamp_ms": 1791730978090.3582,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1158,
+        "sim_time": 38.66666868329048,
+        "sdk_timestamp_ms": 1791730978223.7695,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1159,
+        "sim_time": 38.700002018362284,
+        "sdk_timestamp_ms": 1791730978323.8281,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1160,
+        "sim_time": 38.733335353434086,
+        "sdk_timestamp_ms": 1791730978423.887,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1161,
+        "sim_time": 38.76666868850589,
+        "sdk_timestamp_ms": 1791730978557.2974,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1162,
+        "sim_time": 38.80000202357769,
+        "sdk_timestamp_ms": 1791730978657.356,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1163,
+        "sim_time": 38.83333535864949,
+        "sdk_timestamp_ms": 1791730978790.7676,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1164,
+        "sim_time": 38.866668693721294,
+        "sdk_timestamp_ms": 1791730978890.8264,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1165,
+        "sim_time": 38.9000020287931,
+        "sdk_timestamp_ms": 1791730979024.235,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1166,
+        "sim_time": 38.9333353638649,
+        "sdk_timestamp_ms": 1791730979090.94,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1167,
+        "sim_time": 38.9666686989367,
+        "sdk_timestamp_ms": 1791730979257.702,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1168,
+        "sim_time": 39.0000020340085,
+        "sdk_timestamp_ms": 1791730979357.759,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1169,
+        "sim_time": 39.033335369080305,
+        "sdk_timestamp_ms": 1791730979491.1677,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1170,
+        "sim_time": 39.06666870415211,
+        "sdk_timestamp_ms": 1791730979591.2249,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1171,
+        "sim_time": 39.10000203922391,
+        "sdk_timestamp_ms": 1791730979724.6343,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1172,
+        "sim_time": 39.13333537429571,
+        "sdk_timestamp_ms": 1791730979791.339,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1173,
+        "sim_time": 39.166668709367514,
+        "sdk_timestamp_ms": 1791730979958.1,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1174,
+        "sim_time": 39.200002044439316,
+        "sdk_timestamp_ms": 1791730980058.1575,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1175,
+        "sim_time": 39.23333537951112,
+        "sdk_timestamp_ms": 1791730980158.2148,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1176,
+        "sim_time": 39.26666871458292,
+        "sdk_timestamp_ms": 1791730980291.6238,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1177,
+        "sim_time": 39.30000204965472,
+        "sdk_timestamp_ms": 1791730980425.0334,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1178,
+        "sim_time": 39.333335384726524,
+        "sdk_timestamp_ms": 1791730980491.7383,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1179,
+        "sim_time": 39.36666871979833,
+        "sdk_timestamp_ms": 1791730980658.5005,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1180,
+        "sim_time": 39.40000205487013,
+        "sdk_timestamp_ms": 1791730980758.557,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1181,
+        "sim_time": 39.43333538994193,
+        "sdk_timestamp_ms": 1791730980858.6143,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1182,
+        "sim_time": 39.46666872501373,
+        "sdk_timestamp_ms": 1791730980992.024,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1183,
+        "sim_time": 39.500002060085535,
+        "sdk_timestamp_ms": 1791730981125.4336,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1184,
+        "sim_time": 39.53333539515734,
+        "sdk_timestamp_ms": 1791730981192.1375,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1185,
+        "sim_time": 39.56666873022914,
+        "sdk_timestamp_ms": 1791730981358.8997,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1186,
+        "sim_time": 39.60000206530094,
+        "sdk_timestamp_ms": 1791730981458.957,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1187,
+        "sim_time": 39.633335400372744,
+        "sdk_timestamp_ms": 1791730981559.0142,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1188,
+        "sim_time": 39.666668735444546,
+        "sdk_timestamp_ms": 1791730981692.4229,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1189,
+        "sim_time": 39.70000207051635,
+        "sdk_timestamp_ms": 1791730981825.8325,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1190,
+        "sim_time": 39.73333540558815,
+        "sdk_timestamp_ms": 1791730981892.5376,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1191,
+        "sim_time": 39.76666874065995,
+        "sdk_timestamp_ms": 1791730982059.2986,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1192,
+        "sim_time": 39.800002075731754,
+        "sdk_timestamp_ms": 1791730982159.356,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1193,
+        "sim_time": 39.833335410803556,
+        "sdk_timestamp_ms": 1791730982259.4133,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1194,
+        "sim_time": 39.86666874587536,
+        "sdk_timestamp_ms": 1791730982392.823,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1195,
+        "sim_time": 39.90000208094716,
+        "sdk_timestamp_ms": 1791730982526.2317,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1196,
+        "sim_time": 39.93333541601896,
+        "sdk_timestamp_ms": 1791730982592.9365,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1197,
+        "sim_time": 39.966668751090765,
+        "sdk_timestamp_ms": 1791730982759.6985,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1198,
+        "sim_time": 40.00000208616257,
+        "sdk_timestamp_ms": 1791730982826.4033,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1199,
+        "sim_time": 40.03333542123437,
+        "sdk_timestamp_ms": 1791730982959.8123,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1200,
+        "sim_time": 40.06666875630617,
+        "sdk_timestamp_ms": 1791730983093.2231,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1201,
+        "sim_time": 40.100002091377974,
+        "sdk_timestamp_ms": 1791730983193.281,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1202,
+        "sim_time": 40.133335426449776,
+        "sdk_timestamp_ms": 1791730983293.339,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1203,
+        "sim_time": 40.16666876152158,
+        "sdk_timestamp_ms": 1791730983426.7488,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1204,
+        "sim_time": 40.20000209659338,
+        "sdk_timestamp_ms": 1791730983526.807,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1205,
+        "sim_time": 40.23333543166518,
+        "sdk_timestamp_ms": 1791730983660.2178,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1206,
+        "sim_time": 40.266668766736984,
+        "sdk_timestamp_ms": 1791730983760.276,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1207,
+        "sim_time": 40.300002101808786,
+        "sdk_timestamp_ms": 1791730983893.6855,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1208,
+        "sim_time": 40.33333543688059,
+        "sdk_timestamp_ms": 1791730983993.7437,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1209,
+        "sim_time": 40.36666877195239,
+        "sdk_timestamp_ms": 1791730984127.1545,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1210,
+        "sim_time": 40.40000210702419,
+        "sdk_timestamp_ms": 1791730984227.2126,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1211,
+        "sim_time": 40.433335442095995,
+        "sdk_timestamp_ms": 1791730984327.2698,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1212,
+        "sim_time": 40.4666687771678,
+        "sdk_timestamp_ms": 1791730984460.6807,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1213,
+        "sim_time": 40.5000021122396,
+        "sdk_timestamp_ms": 1791730984594.0918,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1214,
+        "sim_time": 40.5333354473114,
+        "sdk_timestamp_ms": 1791730984660.797,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1215,
+        "sim_time": 40.5666687823832,
+        "sdk_timestamp_ms": 1791730984827.5598,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1216,
+        "sim_time": 40.600002117455006,
+        "sdk_timestamp_ms": 1791730984894.2654,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1217,
+        "sim_time": 40.63333545252681,
+        "sdk_timestamp_ms": 1791730985027.6765,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1218,
+        "sim_time": 40.66666878759861,
+        "sdk_timestamp_ms": 1791730985161.087,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1219,
+        "sim_time": 40.70000212267041,
+        "sdk_timestamp_ms": 1791730985261.1455,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1220,
+        "sim_time": 40.733335457742214,
+        "sdk_timestamp_ms": 1791730985361.204,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1221,
+        "sim_time": 40.766668792814016,
+        "sdk_timestamp_ms": 1791730985494.6155,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1222,
+        "sim_time": 40.80000212788582,
+        "sdk_timestamp_ms": 1791730985594.673,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1223,
+        "sim_time": 40.83333546295762,
+        "sdk_timestamp_ms": 1791730985728.0845,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1224,
+        "sim_time": 40.86666879802942,
+        "sdk_timestamp_ms": 1791730985828.1433,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1225,
+        "sim_time": 40.900002133101225,
+        "sdk_timestamp_ms": 1791730985961.5544,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1226,
+        "sim_time": 40.93333546817303,
+        "sdk_timestamp_ms": 1791730986061.6116,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1227,
+        "sim_time": 40.96666880324483,
+        "sdk_timestamp_ms": 1791730986195.0222,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1228,
+        "sim_time": 41.00000213831663,
+        "sdk_timestamp_ms": 1791730986295.0803,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1229,
+        "sim_time": 41.03333547338843,
+        "sdk_timestamp_ms": 1791730986428.4912,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1230,
+        "sim_time": 41.066668808460236,
+        "sdk_timestamp_ms": 1791730986528.5483,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1231,
+        "sim_time": 41.10000214353204,
+        "sdk_timestamp_ms": 1791730986661.9592,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1232,
+        "sim_time": 41.13333547860384,
+        "sdk_timestamp_ms": 1791730986762.0173,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1233,
+        "sim_time": 41.16666881367564,
+        "sdk_timestamp_ms": 1791730986895.4282,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1234,
+        "sim_time": 41.200002148747444,
+        "sdk_timestamp_ms": 1791730986995.4844,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1235,
+        "sim_time": 41.233335483819246,
+        "sdk_timestamp_ms": 1791730987128.8938,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1236,
+        "sim_time": 41.26666881889105,
+        "sdk_timestamp_ms": 1791730987228.951,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1237,
+        "sim_time": 41.30000215396285,
+        "sdk_timestamp_ms": 1791730987362.3604,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1238,
+        "sim_time": 41.33333548903465,
+        "sdk_timestamp_ms": 1791730987462.4165,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1239,
+        "sim_time": 41.366668824106455,
+        "sdk_timestamp_ms": 1791730987629.1782,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1240,
+        "sim_time": 41.40000215917826,
+        "sdk_timestamp_ms": 1791730987695.8828,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1241,
+        "sim_time": 41.43333549425006,
+        "sdk_timestamp_ms": 1791730987829.2913,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1242,
+        "sim_time": 41.46666882932186,
+        "sdk_timestamp_ms": 1791730987962.7007,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1243,
+        "sim_time": 41.50000216439366,
+        "sdk_timestamp_ms": 1791730988062.758,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1244,
+        "sim_time": 41.533335499465466,
+        "sdk_timestamp_ms": 1791730988162.8152,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1245,
+        "sim_time": 41.56666883453727,
+        "sdk_timestamp_ms": 1791730988329.5762,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1246,
+        "sim_time": 41.60000216960907,
+        "sdk_timestamp_ms": 1791730988396.281,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1247,
+        "sim_time": 41.63333550468087,
+        "sdk_timestamp_ms": 1791730988529.6904,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1248,
+        "sim_time": 41.666668839752674,
+        "sdk_timestamp_ms": 1791730988663.1,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      },
+      {
+        "ordinal": 1249,
+        "sim_time": 41.700002174824476,
+        "sdk_timestamp_ms": 1791730988763.1562,
+        "roi_points": 0,
+        "centroid_shift_m": null
+      }
+    ],
+    "hold_median_centroid_m": [
+      0.3698,
+      -0.0094,
+      0.4672
+    ],
+    "hold_median_roi_points": 27928.0,
+    "rule": {
+      "roi_centroid_shift_max_m": 0.01,
+      "roi_points_min_fraction_of_hold_median": 0.5,
+      "window": "running median of the current run (registered tapes); HOLD median (unregistered)"
+    },
+    "stability_basis": "segmented hand (top 15 cm of foreground), running-median run rule shared with GUI"
+  },
+  "hand_registration": {
+    "original_camera_to_robot_pose_wxyz": [
+      -0.05,
+      0,
+      0.45,
+      0.5,
+      -0.5,
+      0.5,
+      -0.5
+    ],
+    "registered_camera_to_robot_pose_wxyz": [
+      0.1469999866485595,
+      0.02208540743021902,
+      0.3830974546349903,
+      0.5,
+      -0.5,
+      0.5,
+      -0.5
+    ],
+    "translation_m": [
+      0.197,
+      0.0221,
+      -0.0669
+    ],
+    "voxel_phase": {
+      "voxel_m": 0.03,
+      "surface_phase_before": 0.767,
+      "target_phase": 0.6,
+      "depth_adjust_m": -0.005
+    },
+    "observed_hand_m": {
+      "palm_front_x": 0.34800003170967103,
+      "center_y": -0.02208540743021902,
+      "fingertip_z": 0.5369025453650097,
+      "frame_std_m": [
+        0.0031,
+        0.0047,
+        0.0021
+      ],
+      "frames_used": 236
+    },
+    "target_m": {
+      "palm_front_x": 0.55,
+      "center_y": 0.0,
+      "fingertip_z": 0.47
+    },
+    "background_frames": 526,
+    "rule": "virtual camera translation only; computed from the capture before any replay; identical for R/LOW/HIGH"
+  }
+}

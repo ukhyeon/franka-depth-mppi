@@ -1,0 +1,75 @@
+{
+  "condition": "ETA06",
+  "alpha": 1.0,
+  "a": 1,
+  "mass_used": true,
+  "shape_dims_m": [
+    0.001,
+    0.001,
+    0.001
+  ],
+  "slots": 64,
+  "original_enlarged_geometry_enabled": false,
+  "optimizers": [
+    {
+      "index": 0,
+      "optimizer_type": "ParallelMPPI",
+      "connected": true,
+      "not_aux_rollout": true,
+      "pre_capture": true,
+      "shape": [
+        400,
+        30
+      ],
+      "weight": [
+        100000.0
+      ],
+      "activation_m": [
+        0.02500000037252903
+      ],
+      "use_sweep": true,
+      "sweep_steps": 4,
+      "speed_metric": false,
+      "return_loss": true,
+      "environment_activation_m": [
+        0.02500000037252903
+      ],
+      "environment_weight": [
+        100000.0
+      ]
+    }
+  ],
+  "pointer_addresses": [
+    125246952454144,
+    125246952456704,
+    125246952457728,
+    125246952455680
+  ],
+  "aux_and_safety_costs": "unchanged; reported constraints do not include target penalty",
+  "internal_weight_role": "environment-matched proximity cost scale",
+  "external_alpha_role": "additional target penalty multiplier only",
+  "same_sampling_and_settings": true,
+  "policy": {
+    "condition": "ETA06",
+    "assumed_robot_effective_mass_kg": 5.0,
+    "assumed_hand_effective_mass_kg": 0.6,
+    "reduced_mass_kg": 0.5357142857142857,
+    "reference_reduced_mass_kg": 0.5357142857142857,
+    "eta_calculated_m": 0.025,
+    "alpha": 1.0,
+    "mu_formula": "m_r*m_h/(m_r+m_h)",
+    "eta_formula": "0.025*sqrt(mu(m_h)/mu(0.6))",
+    "mass_values_are_assumptions": true,
+    "interpretation": "force-ratio-inspired heuristic activation policy; not physically derived safety distance or actual force prediction",
+    "robot_mass_source": "fixed assumption; not calculated or validated for Franka",
+    "alpha_gpu": 1.0,
+    "eta_gpu_m": 0.02500000037252903,
+    "weight": 100000,
+    "slots": 64,
+    "patch_dims_m": [
+      0.001,
+      0.001,
+      0.001
+    ]
+  }
+}

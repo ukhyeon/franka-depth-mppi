@@ -1,0 +1,27 @@
+{
+  "manual_target_world_bounds_m": {
+    "min": [
+      0.42,
+      -0.08,
+      0.32
+    ],
+    "max": [
+      0.58,
+      0.08,
+      0.48
+    ]
+  },
+  "patch_bin_yz_m": 0.02,
+  "min_points_per_bin": 12,
+  "nominal_point_proxy_dims_m": [
+    0.001,
+    0.001,
+    0.001
+  ],
+  "proxy_capacity": 64,
+  "additional_margin_m_choices": [
+    0,
+    0.03
+  ],
+  "scope": "manual ROI surrogate object; measured point anchors only,1mm base cube is numerical planning proxy, not measured volume; inflation is experimental margin, not measured occluded object or validated safety distance"
+}

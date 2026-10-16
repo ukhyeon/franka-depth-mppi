@@ -1,0 +1,1512 @@
+{
+  "source_project": "d435i-curobo-mppi/static-obstacle-roi",
+  "source_runs": {
+    "R": "20261012-000915-hand-replay-R-reached-measured-dt0.016666666666666666-hold-AB",
+    "LOW": "20261012-001017-hand-replay-LOW-reached-measured-dt0.016666666666666666-hold-AB",
+    "HIGH": "20261012-002203-hand-replay-HIGH-reached-measured-dt0.016666666666666666-hold-p1.0-AB"
+  },
+  "files": [
+    {
+      "source": "hand_experiment.py",
+      "published": "experiment/hand_experiment.py",
+      "sha256": "aa93b7f5268ddbb2065ede3de2abf16263805cc38ae3f43cf9745510dca25d15"
+    },
+    {
+      "source": "helper.py",
+      "published": "experiment/helper.py",
+      "sha256": "feba9c2cb7ba9e6785fcf1c35ab49cb465c6d0192b1d53ad1a3878ae6e166148"
+    },
+    {
+      "source": "input_source.py",
+      "published": "experiment/input_source.py",
+      "sha256": "3d47d2f2d0b05d3e3cae74d73606b83146d6efd8dfc74a7e894100a5309e9b44"
+    },
+    {
+      "source": "target_margin.py",
+      "published": "experiment/target_margin.py",
+      "sha256": "bd2cf3ddc8c82299b0fd34bacf0770482456d700a52ec85f64897e3a46e8722f"
+    },
+    {
+      "source": "target_cost.py",
+      "published": "experiment/target_cost.py",
+      "sha256": "9146cdd622af018c0c57e0df736bc26edfcddad32e6ab419667b8141acceb180"
+    },
+    {
+      "source": "base_target_cost.py",
+      "published": "experiment/base_target_cost.py",
+      "sha256": "38687f39cc0006e174b06a5725aaf756dc9f040acd2b1bbdcf40d13c0f2ddfc0"
+    },
+    {
+      "source": "camera_panel.py",
+      "published": "experiment/camera_panel.py",
+      "sha256": "8180828b22b18e9fba17fbf9bfaaea4ce411f817a15809b5f096efeedbb8d02c"
+    },
+    {
+      "source": "static_gui.py",
+      "published": "experiment/static_gui.py",
+      "sha256": "fd2d87164eb1540070bb1d31ee0bb304f8e125721d5b9cd80c7a3927dde956f7"
+    },
+    {
+      "source": "hand_gui.py",
+      "published": "experiment/hand_gui.py",
+      "sha256": "9f9c04a72e0c0d681c2f136905f4453166bb63d8be6972efa247667dd3d5a2e5"
+    },
+    {
+      "source": "register_hand.py",
+      "published": "experiment/register_hand.py",
+      "sha256": "3f3fc8c8c3635ad8df11e5c8464a27762c1a6c867fc18b6df5360adbb29ff382"
+    },
+    {
+      "source": "portfolio.py",
+      "published": "experiment/portfolio.py",
+      "sha256": "bf8c7526faec6329aa3b1905e7a9dd59df520a25aee31fb698715ef3197da467"
+    },
+    {
+      "source": "goal_progress.py",
+      "published": "experiment/goal_progress.py",
+      "sha256": "b3eb3d5527b26bac7b9e2e8262b758c0e8c5da24f428ec54ea7763acf62e0b83"
+    },
+    {
+      "source": "failure_probe.py",
+      "published": "experiment/failure_probe.py",
+      "sha256": "a0de732658b124301b40357083918a3e6d783129c3f0e3ea8c48b7023e7ba896"
+    },
+    {
+      "source": "policy.py",
+      "published": "experiment/policy.py",
+      "sha256": "396e458c718843eb47e031bce9b70cc6fbf643e1e86ee6d10b288a06c4ad897a"
+    },
+    {
+      "source": "build_hand_tape.py",
+      "published": "experiment/build_hand_tape.py",
+      "sha256": "853d8785038f84a5d781e07e2da7f419cf6a5c7971144d90aa85ca29d68ffd3d"
+    },
+    {
+      "source": "scene.json",
+      "published": "experiment/scene.json",
+      "sha256": "8c7177ea5c01051e9c3d53ce0795894ae7badde75e71eb11bb12e8ae799bf801"
+    },
+    {
+      "source": "target.json",
+      "published": "experiment/target.json",
+      "sha256": "d89aa8620e625fd35a950d4a2d80bea3cdad52cfe4d80416f27ad07937c4a440"
+    },
+    {
+      "source": "hand-observation.json",
+      "published": "experiment/hand-observation.json",
+      "sha256": "9b2f7d80be3c995f9a44496a34dd1091ee7bfe4c75b269d4fd9c44b6f84aa43c"
+    },
+    {
+      "source": "analysis/sphere-links.json",
+      "published": "experiment/analysis/sphere-links.json",
+      "sha256": "d758aa4ca2365131bdb184f07fad8c2ed78fde7461f34883e829b8470cdcc5be"
+    },
+    {
+      "source": "LICENSE",
+      "published": "LICENSE",
+      "sha256": "797d1e69fe7fd1c502e87af12c5a0ed08a84c7a8a22af1c7a3589cbfadff4364"
+    },
+    {
+      "source": "1-real-hand-rgb-depth.png",
+      "published": "docs/images/1-real-hand-rgb-depth.png",
+      "sha256": "51e6f2f51b9a10cb377cdfab02a25a205bd9e1eb97b52934052f781a646242e8"
+    },
+    {
+      "source": "2-isaac-and-top-path-baseline-LOW-HIGH.png",
+      "published": "docs/images/2-isaac-and-top-path-baseline-LOW-HIGH.png",
+      "sha256": "efb6ff8377fd82fe256007fb084ceae279dcb1eebba01c6a3595cdedffcd4694"
+    },
+    {
+      "source": "3a-path-comparison-left-3d.png",
+      "published": "docs/images/3a-path-comparison-left-3d.png",
+      "sha256": "9397cb08ef5eb1eeb3fa497f29900a120e76bd6269868ed8197ab2b65ba90a65"
+    },
+    {
+      "source": "results/R-palm-geometry-20261012/figB-section-y-camera.png",
+      "published": "docs/images/nvblox-observation-diagnosis.png",
+      "sha256": "5698f588cc76aac8cf95cc3272f56a48ce6853bed1d1167b96b476801b31a014"
+    },
+    {
+      "source": "results/R-nvblox-diagnosis-20261012/analysis/nearest-steps150-175.csv",
+      "published": "docs/data/R-nvblox-nearest.csv",
+      "sha256": "ce44a197ad235b8d86922455358ee8dfcc72aec6c04252f6066a355a59ffeaa2"
+    },
+    {
+      "source": "results/R-nvblox-diagnosis-20261012/analysis/candidate-summary.csv",
+      "published": "docs/data/R-candidate-summary.csv",
+      "sha256": "0db2bfd116b5c6681980ea3fefe74eca6e398a34f7a0b326f3f2e734c1edcbe1"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000000.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000000.npz",
+      "sha256": "c43a0bb35bf7e6d31187d7380e1f34dacc56c84eab695ed9879104dcbdcbbf3e"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000001.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000001.npz",
+      "sha256": "25d7f5bf7bbcc088b2285e6f6e780d7848754584e7f5d2ea410f2936095189d2"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000002.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000002.npz",
+      "sha256": "c88ccb05d0f91913f33b354cb421a5980d0e971eabff2f1c605e4ceeaca27547"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000003.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000003.npz",
+      "sha256": "18ef261734a112e2a70bfed16f7ccd4102efeb0c30c9d2cd4d13dbb379a1c978"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000004.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000004.npz",
+      "sha256": "94a5eb9d12e903d30451dc9880ce2f0ce477f51e31bd0804478e488843091ccf"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000005.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000005.npz",
+      "sha256": "1f8b01d2372ed70caea283cc4b1397839a127ef1150945cb267833a778446f43"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000006.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000006.npz",
+      "sha256": "da57a67b2f54693df95c6602895aec016c422fc5dc2612b1da5c83a7311bd18e"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000007.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000007.npz",
+      "sha256": "2d3b62ab3227f6e5dcfc3a61642dbbcaa4b733b8f78803780d4491b04db750fe"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000008.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000008.npz",
+      "sha256": "23103a09b53feca9ecfa33bca0b7ea04fbb8f3fd40c8788a4a3fe6cecf2b1308"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000009.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000009.npz",
+      "sha256": "7afc4700cfc0b934c1891eb67af094efe4dc679adb70b7ba57ae1f4a6b007458"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000010.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000010.npz",
+      "sha256": "41c2739b56defb2ec6bd889e64723d993b992c265a0adee55d10e7712b7a3b44"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000011.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000011.npz",
+      "sha256": "e59d5b25383acfe42581568c95ad8383c87023777f71a7125a29c9ece85bd7f5"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000012.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000012.npz",
+      "sha256": "a3b97b93eb0c3396dff47517feec2e9f92b68360223a37f4d50f45c1f8589bc0"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000013.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000013.npz",
+      "sha256": "eb6d26cc797bb75a543e86254527e38322eeb8dc8275a59d479b7d493d3cf64e"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000014.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000014.npz",
+      "sha256": "be2ff2c1fb0f8806dc5f401c7b1b12b4ea29b4c66f2c01d739d3fadb41cfc9a1"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000015.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000015.npz",
+      "sha256": "2f802e0ef9a64c919068261c316774b5ea675f3eea71e8b8bef6f8b2f1ea1ecb"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000016.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000016.npz",
+      "sha256": "aa5cf962869ad0dccf2a23a1ee652fa5482f79d56282b12a358caac409d6ee64"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000017.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000017.npz",
+      "sha256": "60d5d4dc35f9e3d779924baf7854c5d6680e40ad29f1682ad1e3a1fde0f715d1"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000018.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000018.npz",
+      "sha256": "94da73edfa35cc0f0e4c9a7c75a07f330edcd5d8cb96f539ed79d7d20c3bcc9b"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000019.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000019.npz",
+      "sha256": "7d23dda4a37e66d486c0d9fc683d1d2f9cdee9302288dd83243495cd665fa53c"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000020.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000020.npz",
+      "sha256": "d630439141a27cfec2674ceec516c045098d12c9e34f2517868582e75ba15202"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000021.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000021.npz",
+      "sha256": "4aecf0b0fbd6e4f0a6559042f12fd7187b7b1f379c56d33b010cbbafd77110d0"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000022.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000022.npz",
+      "sha256": "4fee355792192954ce60025d56cf42e00bfd0cf0bb820b2e143af9d3319cb950"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000023.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000023.npz",
+      "sha256": "8a6446e3d81fcb51ed3d563135d5e7a00b9b11569e3046850ab58a73ab2922d2"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000024.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000024.npz",
+      "sha256": "cfd724d2dd4187be74543581ee0ee208c79944c1da581b5b07aeb818850dfc1c"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000025.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000025.npz",
+      "sha256": "339896ef656ffaa74e00187de28de653f787d4b23b2b51e48b63aee0087fc0bc"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000026.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000026.npz",
+      "sha256": "7bae7c417b83d1cdc34164c7f8cef30cc6bc502aa138db957a1582af0a04aeb0"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000027.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000027.npz",
+      "sha256": "eb6df9a49df00ad9ecdbae114419e95c3965d327d1e811986bfabe3c8b0ef2ff"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000028.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000028.npz",
+      "sha256": "e204fc8a9a81018bbb6c77cbbd490f0193e5cde8ed848970578072770f81f12f"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000029.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000029.npz",
+      "sha256": "210d9788727397200526cb7d3544e8aeee02f6f66d1083229a05753f6cf900d3"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000030.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000030.npz",
+      "sha256": "5058188ca2adeedb2fe24aeee6b344c6702db660820245c2978262bdb0b3946b"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000031.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000031.npz",
+      "sha256": "61a9c1aa3da6861c71a78c31fc137ae08a764d2785ef59d936581100dd77183b"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000032.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000032.npz",
+      "sha256": "361da8e68a5c21050921d49da09c55c076cf9573ef250abff6e7843b30bacc1a"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000033.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000033.npz",
+      "sha256": "b491d38354d45fc7513cfab15f97d2bdf0279c4318eceeb534eede52dc1668e0"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000034.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000034.npz",
+      "sha256": "03d84e116ca5ca341f28d98ce3dbd01c1add0b432bd90a703004b078b018a2a7"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000035.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000035.npz",
+      "sha256": "5967c0c631265765c03aae12ee7e984f718f6473df2c4e89eadeddf243f1df79"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000036.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000036.npz",
+      "sha256": "f6e71788b9b16d4a855be7a01126bf5ae59f48cb8bd5d28e19821f2d2fea257a"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000037.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000037.npz",
+      "sha256": "8f2cda744c1c6fb26e1c30eabab4fd5851c55831ce7d1d34b8d993019d22468f"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000038.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000038.npz",
+      "sha256": "932110d538ddc083233297cbfedcf7bd010daee010a8fe615f815d6a76e8e6a3"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000039.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000039.npz",
+      "sha256": "142d39ea5131973af6c9622f06f0430c0bd0a3c30707ee55fba2283e3751a816"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000040.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000040.npz",
+      "sha256": "e803bfd899f6fa9eb00f0a5ebeec3a6a4bde4e4e59230567be709e2898ea2883"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000041.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000041.npz",
+      "sha256": "0983c118aa83dde0a48e13fdc561abac3c2fa45a11340b3194ada856fe4f3aac"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000042.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000042.npz",
+      "sha256": "eeb203fa40acaf5044f489ede690b6e8b962fe30acac4e1e42a4485677b1f35a"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000043.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000043.npz",
+      "sha256": "34bf8f3a64f8d40e9fd034543d6e908184bed38d89032e2e26cbe1d6083a78ca"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000044.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000044.npz",
+      "sha256": "4a56997f2277ed4c07a787b50abd316e1204ba1b8e6e427c1618ff7be55e3941"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000045.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000045.npz",
+      "sha256": "48059bce9a4e63958c9792d0b796459629479f338fe6202396a03717cc2adadc"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000046.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000046.npz",
+      "sha256": "ddd0fe8cb92333108f6ccdf794ad2ec03bbcc1d107ad51f810c45b9de718c0ec"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000047.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000047.npz",
+      "sha256": "b35938d1aae42a75f7c03a5bf051eac74f3969de836fcedfafb9d28659f2314b"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000048.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000048.npz",
+      "sha256": "d80bca4a964d7f43bd1e7208fbb8d3d3ffecf046cbaae730185797f46044152b"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000049.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000049.npz",
+      "sha256": "302fb0d872332eba187020fd3967c62f774c777bc31fdc70980aa8e6cb383067"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000050.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000050.npz",
+      "sha256": "dfbef74bea42a03c93575c5524af29ded10c49a98efa6eddccccca9e8b32bfb1"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000051.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000051.npz",
+      "sha256": "34e05fe418948f14386faea23541ddfca2cf98630255c0954091e0308022a772"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000052.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000052.npz",
+      "sha256": "990912114dc8ef9a04239281b0dd2f27233811f54339589a0b1ca0992ecad6e5"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000053.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000053.npz",
+      "sha256": "fa68a38235544c233c6f225b76dffdda43205735cc7c39dba7cae6161681798e"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000054.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000054.npz",
+      "sha256": "7b188e9c6bd67771cc8ee431c10c14964f9b79ba25f0720dacca5741825a9f0c"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000055.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000055.npz",
+      "sha256": "f69a28a259c0ea2144912accc35c838430e5320b6e6889d468ebb9a8e6409b5a"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000056.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000056.npz",
+      "sha256": "850ef2bdb7dfc5b9c99c5c8b1467215f6f1e625b2b676a7c1308e8ed04934d07"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000057.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000057.npz",
+      "sha256": "fc5d56060f306fe3fb1422442374af0c59f6757b015d5edab5f48c58fdbdf81f"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000058.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000058.npz",
+      "sha256": "c527f238fb54171e6bb3e3043e7be8206970aec4ece14df00fb6bd17b7e7c21f"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000059.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000059.npz",
+      "sha256": "ea563759463018e0b58d585f8fff0f8842c3436e6edd3d4cd1ce5c1c62305686"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000060.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000060.npz",
+      "sha256": "09b1f7efd1bbc2cfa49b0526d4e0c7321d2cbc51d1eefe1f1ff4a4c3b88371e0"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000061.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000061.npz",
+      "sha256": "84bf747a6231a5ec6ba879cf79f3489f89e4272c7b9a467b1fdde5d98bf81817"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000062.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000062.npz",
+      "sha256": "e7d3ce42aec811dae8a9240edaaeac0ab24458d15b5928b0cbd148bd3290f528"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000063.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000063.npz",
+      "sha256": "9966a67211d8f95db5161a6070f99d938c768141478d4a026fb2d37ffb6341d9"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000064.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000064.npz",
+      "sha256": "7c2963a0353bd1ca8373aa189733e131f4a0c65d373ad8f898a35fe27d0320f2"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000065.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000065.npz",
+      "sha256": "5c6b05dd0b2916159c3652b34218f1e6f4485c0009ce11b310fa98d32070307f"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000066.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000066.npz",
+      "sha256": "6485c4e048b713617a2c9a2735f8df44c689a3e448607e89bc354db848a89fa7"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000067.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000067.npz",
+      "sha256": "063da97069d18f7f2c634a0246dc2a10d62354ed4f1c82a92bc9d033b6942bd8"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000068.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000068.npz",
+      "sha256": "2e34612de5f81b074f672d2e361c7d99b261d168f6e908f2d371ce172c6ef168"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000069.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000069.npz",
+      "sha256": "64d9ed63c9094c51dfb53c7643e1da2bc497ab08eeffea247d71555c3baedf32"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000070.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000070.npz",
+      "sha256": "bc17ef92ee29148e33a22da29da920171d95b5fc13f9539113528dae8c357cff"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000071.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000071.npz",
+      "sha256": "931a81acc57edbefbb5c6ac770f983c89e6aa3b4db9ceb91b4dabeb1261f6b94"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000072.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000072.npz",
+      "sha256": "fe45eed580df02aae2c05745d81323c165428cd15587fcbe804f3142735dfe49"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000073.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000073.npz",
+      "sha256": "4c6682448e7479efa512077169eff09697d342567a88bf04759fecdc2f779ef9"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000074.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000074.npz",
+      "sha256": "9b96db393c74747cf2419d9d4b1b4dc748cd752d7b20256c174f7bd171441872"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000075.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000075.npz",
+      "sha256": "1c084c96c50cb9a03298c535ab8b7e51943b6c1f384b2dbe482d4817e686c8ed"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000076.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000076.npz",
+      "sha256": "98fb45aef848574c7b4f73d9a487c1f7ea195c928086ac5404c9edca36db5c28"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000077.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000077.npz",
+      "sha256": "cad578bcf104af445b721a377585ade48e518c2824e5a54cb4c7f537264e12da"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000078.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000078.npz",
+      "sha256": "9ff89ec8c46c70495ed1929be93a21c6343dedafa9270417724dcd4fd279b246"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000079.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000079.npz",
+      "sha256": "7654572c9fe609da6db2ebc16f9c0f4dfa73b99575b0bd23ee503d527551857f"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000080.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000080.npz",
+      "sha256": "3d49659f895534c3dfce78f0721df4c53ad78a98d56dbfb547ce6131870804b5"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000081.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000081.npz",
+      "sha256": "723e3c16006736d05543e750f3abc625fb57586bd60498e3137745634536c3b2"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000082.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000082.npz",
+      "sha256": "4c8ed0f958fd27b7188fca739bf3f8e07020064fb585db86224a3343c6b2969e"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000083.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000083.npz",
+      "sha256": "57c136c77885af86cf267fdfe44b62a7d73c5429390738b087454ee40e8c5bae"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000084.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000084.npz",
+      "sha256": "6ce30595ed24f97b263019fba8713acd328114d06acea6be692d4c364ca2d5a4"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000085.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000085.npz",
+      "sha256": "a9b3b0fa5b7f2368fc44919e5305430f062b60b6b94f1dc4282f1f0b8fa03ec6"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000086.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000086.npz",
+      "sha256": "5368654b16118383ef1b8852ecc5fd0995ac615326a19ce55d11164e2e5b79fa"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000087.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000087.npz",
+      "sha256": "f88c28771322a5fa5699b23024d5d4f27b8c7954eafed308f0b78b5e1d2bd318"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000088.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000088.npz",
+      "sha256": "0d749e8ce55e1585d1b10a6e219fb9150f29a1518f4b6a64f7a87d9f6e22edf3"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000089.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000089.npz",
+      "sha256": "930ce15c819cf8f2affddde23337d728c58ead4781c913a086caf34fc2a888b7"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000090.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000090.npz",
+      "sha256": "f108fd4db7002068ca6a59597735cb38e8e2ab50aa8628a9df5226c72b0f46e1"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000091.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000091.npz",
+      "sha256": "4805f6af8868d423ca0e8c1206e4749ce1ea9d2033175d197c5b44150b1e3270"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000092.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000092.npz",
+      "sha256": "62c44af64a7050ed199e6a67d6d4f0de54ad15203e66452b044b44f2abc4b764"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000093.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000093.npz",
+      "sha256": "f595f1ba8a672c28c04237bf3257f438cc35d99a882ddd3f1ceaf6761e5e5c3d"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000094.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000094.npz",
+      "sha256": "28bcc2d4cfcc4419e98ec89e46dfdd48007167078b5ba6bd6139c522e998eee6"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000095.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000095.npz",
+      "sha256": "ba54e6cda8c212216601764ad4777039d34bd72726387bf86959ee9e1e6297c3"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000096.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000096.npz",
+      "sha256": "cae29bb2029620c90ab45a5f93bcd590403b91d77f6a4e27e68e157be92b4109"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000097.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000097.npz",
+      "sha256": "8207f87b5639b99f918815663e68045e192e66e15f18b1f060d9524f2e1adf6b"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000098.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000098.npz",
+      "sha256": "5b61722d7a466a54888e59489f5f036de3b25ee964d5edd80f3b40495a639751"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000099.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000099.npz",
+      "sha256": "c02077dc6408e1d63056fc3f66f18f6e54e7213cb55ec81578fb9504dd70bbc9"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000100.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000100.npz",
+      "sha256": "9e912cec300090b5148b864855aa3ca18a940c9383b772f9f8141af1e45d0aa3"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000101.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000101.npz",
+      "sha256": "4a324d8a27f0aabd6d49365b3df320d8f8de3aa08aa84cc0436e10e0d2c6881e"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000102.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000102.npz",
+      "sha256": "e7d0ea262bd4505096901f59ec1a4efcb2655bc0f8946b3fc3caf0813d7c3df1"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000103.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000103.npz",
+      "sha256": "9d7e50c5e2563e711135a8e146ecb61f93a075a2ef655350401163509cf1787a"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000104.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000104.npz",
+      "sha256": "f2ef1f9c76fa26d89d7983b1f77cb97ae601f31feaed959f492cbe8e977629c7"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000105.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000105.npz",
+      "sha256": "c880bf856ae551cb6b5df56ffa6bd6bbf18e68e54732d85a08ca1453713f8d69"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000106.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000106.npz",
+      "sha256": "3f0c2ee7f7a1a14d91be7b4642f1f83aca490833b1572c1fa4c1e0bd93398e15"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000107.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000107.npz",
+      "sha256": "fda24dc47b79ea8dc6780accc33d51cf47af5dc6918a1798a376d4a945a17149"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000108.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000108.npz",
+      "sha256": "646f0745828d206b9a3fac87a2eb855ee066349bb9b767f37e29495243cacce2"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000109.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000109.npz",
+      "sha256": "00b6f2d5448bce1182d2201d80fc3b9c62b6c304d2ee308f8ebdcb0b58058346"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000110.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000110.npz",
+      "sha256": "3db4cf1001896ef9873570b38d0dd90ef8c779cbcf212c28d52838c1f4b425e2"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000111.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000111.npz",
+      "sha256": "acaed893d45b42252939d1f35b1a7f339c1c265ab5ab68c4e7298fa8f88a6c1f"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000112.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000112.npz",
+      "sha256": "19fde52dc0d164c47ebd3e25aec1797e9f51fd433f0d0ea25ae12673495a780a"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000113.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000113.npz",
+      "sha256": "3b612a5beeae645d1e56a443d903973107993a95c9c72a0ce34dab22e5409d57"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000114.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000114.npz",
+      "sha256": "c4253416764fc735f8072277889a006578437dce2d4bfb19ef7f985780c62a1c"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000115.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000115.npz",
+      "sha256": "dfbd7819b2da18f9b4cdfcf10e94daa9e1b4b10b74ead37c0d34aac51310532e"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000116.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000116.npz",
+      "sha256": "92afa53a6aaacbed08839fb48172477b7c2ad0f13c8ebfb0e605ad5d2049a9ea"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000117.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000117.npz",
+      "sha256": "4d8f4b8547ba50296063b6853d62490f4c0d37a8b6f4ebd7821e8a504d3d4ea2"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000118.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000118.npz",
+      "sha256": "3a3b5a8f165fbd7a603cf7ab6e6846ab500b3fb674635862383f7d9bbd5ac884"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000119.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000119.npz",
+      "sha256": "13abd301b663dd14d3c1f4290c2304d0d4dc88652de6960e6b2efcd3d232e7c7"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000120.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000120.npz",
+      "sha256": "e8009bbe1387c9cdb8ce0a448eaf93856f0a2ce38b9f1bad1165202c300039d8"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000121.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000121.npz",
+      "sha256": "7e34bf2764e32806e99ffb68bddec65d0afce72f4f5f1e476941fc3918e6de46"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000122.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000122.npz",
+      "sha256": "bb46670e300d64bf29c00b936ed90c8e5d7f9a8a267e9520e1b18758d1b96330"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000123.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000123.npz",
+      "sha256": "491d94937e1e6fae609ebd469bcfb9037d41c90ddd4792274ec69ee52f2eea08"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000124.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000124.npz",
+      "sha256": "29e3ee3ac7c37ee341c846cbbe77621361cd8e9a587736086aac871254b2d979"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000125.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000125.npz",
+      "sha256": "e6f1067d80cf05846193abce0213016522ea09e06cb71e219b2c87321daf82dd"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000126.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000126.npz",
+      "sha256": "d17d5303ccfbb56ad3291b2d2e7b23ce0ac943f803f81bca7d057bf36cf3fb40"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000127.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000127.npz",
+      "sha256": "16f84fafb51a95e88a4643a40ec890345f5daf1f2b09ef85a5c9180e7cc0d51d"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000128.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000128.npz",
+      "sha256": "3ef0c144f35be43c3d802e07a080097885c96da8f93f0be26d3a27f2b754cd16"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000129.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000129.npz",
+      "sha256": "7bc07e11c1b820e9c0763b3001641c5c86adbc2388e5156c6fd3c9f87984b7c8"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000130.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000130.npz",
+      "sha256": "f10b7e41a92b1d22025844e495e05f1d810d7221cbf124a7656b3d9c6ec597ce"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000131.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000131.npz",
+      "sha256": "307d17eafed86585d1aa0bdfca5cada5c8e7e376718943e855b45f40f9d41c8f"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000132.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000132.npz",
+      "sha256": "f135b9a61210457b3753238789d07fd23fe4d12acdbb18cfb41cea847e94a8b7"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000133.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000133.npz",
+      "sha256": "90f174474a345e4c00e62a38b3d120d2f2538109ca16254d919750c55eca710d"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000134.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000134.npz",
+      "sha256": "523021dd924ed7b7468e067c0c9de270e088ae1efe6670d2e7e3d9b8ad2340e6"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000135.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000135.npz",
+      "sha256": "d9de97726eb198762cc31e4c1aa253230c67978086315f161e5371051460754c"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000136.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000136.npz",
+      "sha256": "a30e51ad7499b34fab24a558f881afd014a8490c995f17929199034210bcbe51"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000137.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000137.npz",
+      "sha256": "2c91351584416af3a73b9deab4f2f19b5ff1e81d6cd348aeff7e6a219f2a7d89"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000138.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000138.npz",
+      "sha256": "3b7be8dcaaf19b2baaf7f8c27bef812996d4d8fc223d474b2d71ebbd93f52c84"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000139.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000139.npz",
+      "sha256": "1cf23ee55c8780a0445ea049bc2d0948387b9cf72e86e8633792d083ff86ee0e"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000140.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000140.npz",
+      "sha256": "84e9e8198da4e195cc11231626d204cfe5313372bd913796c8a375685b22dc39"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000141.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000141.npz",
+      "sha256": "9d148da2147913844239a3877ce14b081980b5b8db40f200fcfd39bffac06935"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000142.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000142.npz",
+      "sha256": "eb06c07ad15b4c644c7db7b44ec14c927373b172db95a46ccd22eebef71030ee"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000143.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000143.npz",
+      "sha256": "4cc973453656eb56ef0a97fb202643803fd396a8a0c37c745347b448830b8d64"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000144.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000144.npz",
+      "sha256": "54c0b84da16156dd40208296bed8a27d34a1d88a3eccaa0a20a4608a51bf0120"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000145.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000145.npz",
+      "sha256": "403b55975626f6cb23dbacc0dbfae29507b0a0e41af40ec108bbbd10a35b42a5"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000146.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000146.npz",
+      "sha256": "2054c800e28d92cb62e2a6c63dab9e9284832c52879883c247e847951155018e"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000147.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000147.npz",
+      "sha256": "ec56e4901bb9f31c295ed95ddc6e6b9866ab49b83b9ef55d2a1f1a05f3213015"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000148.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000148.npz",
+      "sha256": "539873dcfdc5589255b0172802efc3f2818496646ab2d4fd638e64643a91ac85"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000149.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000149.npz",
+      "sha256": "5e0dff03f592002c6647e3101a24c8cb159c13de3699b75a854b302ca4690d6a"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000150.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000150.npz",
+      "sha256": "043c11c112c1d54e336123f49ccce1a09210862ae5d5ccecd7b4d223971a09dd"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000151.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000151.npz",
+      "sha256": "1004766774ba5305d320e14aaeca2798273859f60888720a933afb7e05a06c43"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000152.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000152.npz",
+      "sha256": "919d1073041c8280bb606ec02f116f618588b01d92335745e080dea6e75ba7a6"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000153.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000153.npz",
+      "sha256": "27293ecf032455c2691e9dcac7fa8a4cc7f3ec1219b2978581d8851480b01a9d"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000154.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000154.npz",
+      "sha256": "2293c148051bbb5c35ec022930d6e38f5e0c596684e048dd4930906579b375ac"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000155.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000155.npz",
+      "sha256": "d150d2e8e736e75adb9b4213c1429a213756d33aee39fcc3faf9db0bd65e4d9b"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000156.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000156.npz",
+      "sha256": "932c8904eadba45d0198f7848ca25d02d23c16fedd77b7f9c826a489fba1e9b1"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000157.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000157.npz",
+      "sha256": "fa4183cba09bd63ed0bc8bb9f1853cfbc4b076af64fcc907eb2c1b8d7191707e"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000158.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000158.npz",
+      "sha256": "b89ac3192cc1c8ce53733f3748953954635e13f0ef802a084d056689680f5832"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000159.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000159.npz",
+      "sha256": "51204fbd8485987508218679c0e1c8f4cb9ce012bb82af71568b5dd32aae0784"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000160.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000160.npz",
+      "sha256": "ffddc384b43334cc67345a3187a08fb74733440309092009235d3783e7ea03f1"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000161.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000161.npz",
+      "sha256": "a515dcda5566b2bd37724e2a1fcd1c9d3ab2145dfec2b48a4b182444f18f0c06"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000162.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000162.npz",
+      "sha256": "78d0616fe0e09a47ddda79603d513e9d3e243f85a878ab2ce82142268533bbb2"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000163.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000163.npz",
+      "sha256": "629d48a6e86e52b9ded69228fa3510fa673d9a74182cfb6ea3339545be265c24"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000164.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000164.npz",
+      "sha256": "379564b944bde1557c26ed120ce7a065776ff5a0c894df4379ac848c749b94c1"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000165.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000165.npz",
+      "sha256": "049531db54cd41d56b15e133d5ed107d42d098c6dacac090236079a09959e3b0"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000166.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000166.npz",
+      "sha256": "59ed66ad9e050047dd553f4560b5a5f53a12b7bc73c31c20d388991d3fc00265"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000167.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000167.npz",
+      "sha256": "941b6fe2f284d5754dd6cdbfd6cb5d3717dea8b8214fbe31a2fad6ac17c60fd3"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000168.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000168.npz",
+      "sha256": "b2f60826cd3d1ac8f4ea7a242efd3add45071cc1b10eafe567257b806b64dd8f"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000169.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000169.npz",
+      "sha256": "72448919656030fa60eb2fca3e9bd5d47716901e949f2af317eddf92eb03d618"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000170.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000170.npz",
+      "sha256": "1af23d7a373b3585dfadcfe9db3da9b777b3e6e5b6dffd3b66cc304662ca1c38"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000171.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000171.npz",
+      "sha256": "959fef04a111281c0e2dafde46f6d830405c1a9cad3e83646d71a640bce74f16"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000172.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000172.npz",
+      "sha256": "9308366d474b7dbb3789e4a3c703dc4a196e97735a317a1d363ac6ea89cc9f13"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000173.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000173.npz",
+      "sha256": "ff3d1a468b196905dce999dbbc30fbd2695db4324c8d05935f282f3e086cdb07"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000174.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000174.npz",
+      "sha256": "2a3e911668bd4d7625b40a4d4f0ff92c16f275683a3a59d7303b6e37f6d9c58e"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000175.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000175.npz",
+      "sha256": "3724cd90bdfe88a117d20e4236e59461ee62271cb16a435559e3c83c083319c0"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000176.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000176.npz",
+      "sha256": "f71bb0a8b2004a07a84eca5f464cad218d2a0cc8d0aa9fa8d8df006eef41e426"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000177.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000177.npz",
+      "sha256": "fba5369a7fb97bc19eeb267084026950c78df7beb44b3bdc572a81a55444d032"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000178.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000178.npz",
+      "sha256": "17b40647e7780c798641d90353c1fe22e55cfaaaaa77bc2e0ab8cd7cb772d6bd"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000179.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000179.npz",
+      "sha256": "07f049a0ec76b1589b617afe9a7c7a035f2ba3047b0ac89f339d5393ba30ff71"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000180.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000180.npz",
+      "sha256": "4ae4b68ec960de12c7ebc710b13dc8263a268597da50e25b6588bd1bf8ff42b6"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000181.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000181.npz",
+      "sha256": "6ab28a5d6ea7bbead5def7b1a7e5e51f75b91b9a6384982cb52440e0b31ba924"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000182.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000182.npz",
+      "sha256": "df8cb0a11e7b37f802a4a0d32533e66ff804c93d634afad079ac23f5d1e45cec"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000183.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000183.npz",
+      "sha256": "a9985594399b47d8a6f371be3418701827ea14911903beee95e9516c6c85938c"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000184.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000184.npz",
+      "sha256": "26cd7aa859eb4e98fb327c59aa45de92e0968c7e8539e7c9e859711723cf6ae8"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000185.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000185.npz",
+      "sha256": "ec19bd2cc46dfaeb3c0af4daec1d95f44fcace6a0acbb7cd1d0e4a68af9285ef"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000186.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000186.npz",
+      "sha256": "51f3bb950309c4992a3858d4f86e5a69bcf2e6691bc7b19056e0b91eebc48252"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000187.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000187.npz",
+      "sha256": "a534033c7d651db770c474113ab8b1f57f4eba44df917d79d7e1349082347265"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000188.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000188.npz",
+      "sha256": "1511a7f54e27d7cdd9707dee7a7c296d9b0500d2aec5310caecf64a1980a4d89"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000189.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000189.npz",
+      "sha256": "0d6711ca17b2f7de1fb7a48c1d4c176bc0cb688a7a2145cf7f5ad17c639347ba"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000190.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000190.npz",
+      "sha256": "33e2941995f4589cbc3a5d060e9770c1e73701ff46820a7295b581846db077e6"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000191.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000191.npz",
+      "sha256": "c7e727073aa6d37391d8fa77ceb000f790c3b4ca318510467ebf520248f18a6c"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000192.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000192.npz",
+      "sha256": "2a4543ddb749a87a2034b7625344efff031755ec1808e47e58f7ba37f922151f"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000193.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000193.npz",
+      "sha256": "889fcb0054f5c016eb7b35e4fd2b132fc648bfb0ecb879bc0bbce2c7396eab16"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000194.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000194.npz",
+      "sha256": "b892ff231de0a6a8d44dd394b67a4c1967c17b5f3464ca92eb24c934f92bde12"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000195.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000195.npz",
+      "sha256": "5ac52ade5b3407b10f36d8c8ee2d46aa07df1ba02e013e896a460365bae8161e"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000196.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000196.npz",
+      "sha256": "5b12bb0fba82b7d05254807f13ba747b0329dd3ce77a893d063d7faf8511a6a8"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000197.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000197.npz",
+      "sha256": "4628b93743d126d070c7f3fefb2991e65afadb1679fcc0deb5c1910d061b40d9"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000198.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000198.npz",
+      "sha256": "39cf85c6b62ad2c881836420290606215254485f7f3c827cfda56ad5e5f7e251"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000199.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000199.npz",
+      "sha256": "f7028e9ec6892482ef3332d71b75cd68ed74242af08d973a41b027230230b9f4"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000200.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000200.npz",
+      "sha256": "fc5343721dac10efa5b763d780defdaecaf6b4d172c7b2eaf094deacfd490226"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000201.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000201.npz",
+      "sha256": "4d235b9787886585aa7f6eb659f95dfe26760e0d9bf0141c6cc14e900fd90a09"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000202.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000202.npz",
+      "sha256": "b14709a67f3d94d8622610791b6cb31b4c4cb64f9e904b292dfdb655775f6ef8"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000203.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000203.npz",
+      "sha256": "5c47d3ac9ccebac8450bab52b35f9b70cb442c9da2d3dd6a57aa5a44c5a34934"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000204.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000204.npz",
+      "sha256": "adf4d9a883cda9f42679af5b84a3f759f4120adf728573eac4eef66c2a8e9858"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000205.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000205.npz",
+      "sha256": "d6217a1bbd2d5594333f95c14884df34703e1dd5e23f6b1eb821030b12c19fe0"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000206.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000206.npz",
+      "sha256": "70d57895ba284c6d0887134a77bd629190e30d5fdd8df8a8c5e0fd360e42b9af"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000207.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000207.npz",
+      "sha256": "9c42f04b5b83daee760c11dec454a74b1efdd57d51b1e1a56ebfb7665f8c5959"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000208.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000208.npz",
+      "sha256": "da1f1a54840a97bf0ef89c2d172ad34bd824f994a4eb5c0b7b1d69d2538d17e4"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000209.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000209.npz",
+      "sha256": "6638f7e93fd89e4c307254dd153dc4d16349da98865452085c924743f10f9b3d"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000210.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000210.npz",
+      "sha256": "8e3586577cba8abcc8440fb575d38b12184905a4912d2a9237b608b15b7d86a2"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000211.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000211.npz",
+      "sha256": "e6032fd6d7a0317854eaf0661ec9469b6a951342174ff2d9ef22b80a0a3b79f5"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000212.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000212.npz",
+      "sha256": "43f01c60e60dd18d263247f09587a397ec8552e287fd7822f36764139146e756"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000213.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000213.npz",
+      "sha256": "f5a4f34a4bb5f4ddeca3f24a0d91137478e28e3b5f4f4cdf51350c6acef5b7b7"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000214.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000214.npz",
+      "sha256": "0a57bdcd8aa7313b18e71270a52adf2d04752f262b446e6113a60752978b71fd"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000215.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000215.npz",
+      "sha256": "3b41f919cd3aaad8f76989be69f1ac82e2b2510f2d1197585175f40145e4e41c"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000216.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000216.npz",
+      "sha256": "1c4b9174bae66fe0f1dffbed91bbebc6196c3585c3c05e0e47079e0c1cac79a4"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000217.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000217.npz",
+      "sha256": "4999b7174d1637cb7d5d0b6c17791ef3e5c3c6185679ad2369d31354672bff9a"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000218.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000218.npz",
+      "sha256": "3afe4e3e35be59aa80e98096aa40f80dc779c04ee3dd1a39ee297349e1749fdb"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000219.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000219.npz",
+      "sha256": "3fdb87a80b23dc07140b527a94b81c1837b4474f42078a7bce2dbfe6e6d6e9e7"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000220.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000220.npz",
+      "sha256": "86c8dfa2b3fd2cf325e67dad4a6532ecbd9cb70c9e51d16386552ef5a6b6eff7"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000221.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000221.npz",
+      "sha256": "84380a37ace2555633c090f79688e0e45e0d445d4a6d5f73b962ea3f15932155"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000222.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000222.npz",
+      "sha256": "9884ff2b821c0f98faaea5e3930a69dab556f3e63c671eeca7c38db434158beb"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000223.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000223.npz",
+      "sha256": "ebbd6c85d921d5c528fec3b86919221d213e1976980b68154ad5fd5cd863f795"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000224.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000224.npz",
+      "sha256": "837c728219349da37d8a286e42193eb522946e6a8a647ffaabc7b950cf098518"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000225.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000225.npz",
+      "sha256": "fb1c4f63ab8a4b6b00f4cd4d378a953c2ec47a02c7e8bf5282b54a3130698fe9"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000226.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000226.npz",
+      "sha256": "f12a7081612fed456be353aa4999c086f5d09dfd9e24e77d9960c22829b60d42"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000227.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000227.npz",
+      "sha256": "b266a9839651af21f47ef0a656632b2a9a9c206667b5855b2c4f9f6874654a5c"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000228.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000228.npz",
+      "sha256": "3ecd9bdff0fa77a88ed91ac050c3efed2892efbb104d6afc52f9edcb5f9ac80d"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000229.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000229.npz",
+      "sha256": "b7ea467b70a2fb8491b41f306caae91c953db4c06860ed6658fb9561ce84f2c2"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000230.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000230.npz",
+      "sha256": "1d4974228f529fffdb67437ffcf1397a693a9b33cf8336ba1ceff441783c0912"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000231.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000231.npz",
+      "sha256": "c19074da4a8cc1dce336c4abf88d268107b6a40a1d6443993766ab1b333d31dd"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000232.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000232.npz",
+      "sha256": "05ac2de284f0167f7c19a49bdc82b1dc5cd18e7356ac985494a8310c08166571"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000233.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000233.npz",
+      "sha256": "2bc9834192adfeed5b1a6a4ffc16119a4818f55f1047b3166417e2465de6a6c2"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000234.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000234.npz",
+      "sha256": "2c28e22dc34db0617c5e93ace5bf84b7695141f05f687f8573d93836fccc6f66"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames/000235.npz",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames/000235.npz",
+      "sha256": "0478897c3ba68dda4d363280662f4232cd1bb90aba3eb3f0aee4ef55199fbcea"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/frames.jsonl",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/frames.jsonl",
+      "sha256": "db0c8ea1c344a51649ee8e4a331a4611105e7d2abedd47330030775b955f7d5e"
+    },
+    {
+      "source": "inputs/hand-tape-20261012-000004-472steps-registered/metadata.json",
+      "published": "data/hand-tape-20261012-000004-472steps-registered/metadata.json",
+      "sha256": "4ad661b8d99a992d187d10a3cc3b410233e622535ea2b45e2e5c33b32c7af020"
+    },
+    {
+      "source": "results/20261012-000915-hand-replay-R-reached-measured-dt0.016666666666666666-hold-AB/metrics.jsonl",
+      "published": "evidence/R/metrics.jsonl",
+      "sha256": "6b48beed01f72d916436484ecd5a8d0b9e3550193150badd8ed47ff5d6814491"
+    },
+    {
+      "source": "results/20261012-000915-hand-replay-R-reached-measured-dt0.016666666666666666-hold-AB/summary.json",
+      "published": "evidence/R/summary.json",
+      "sha256": "44288d0d331039b311960b4febcbcd81154c8332569c51769c0c0ab55952c62a"
+    },
+    {
+      "source": "results/20261012-000915-hand-replay-R-reached-measured-dt0.016666666666666666-hold-AB/control-settings.json",
+      "published": "evidence/R/control-settings.json",
+      "sha256": "4e93dc7ca3ef651443bb74e1bcd91bd715d830d204934dacda9bb1c332c0952b"
+    },
+    {
+      "source": "results/20261012-000915-hand-replay-R-reached-measured-dt0.016666666666666666-hold-AB/mass-policy.json",
+      "published": "evidence/R/mass-policy.json",
+      "sha256": "91fd098651d44a5969b66053dc46965ce33b466a4fbc1588d938a0cfc75febc0"
+    },
+    {
+      "source": "results/20261012-000915-hand-replay-R-reached-measured-dt0.016666666666666666-hold-AB/cost-connection.json",
+      "published": "evidence/R/cost-connection.json",
+      "sha256": "86e653a70397172764e73df19a8e0dc8c4b8de09d39239e56c1232367c043343"
+    },
+    {
+      "source": "results/20261012-000915-hand-replay-R-reached-measured-dt0.016666666666666666-hold-AB/runtime.json",
+      "published": "evidence/R/runtime.json",
+      "sha256": "557ea8ad4ae7c3ddc14ac3c9ff54757f20482ea6c74abd8c617afe4cc0a8dbd4"
+    },
+    {
+      "source": "results/20261012-000915-hand-replay-R-reached-measured-dt0.016666666666666666-hold-AB/goal-events.jsonl",
+      "published": "evidence/R/goal-events.jsonl",
+      "sha256": "f5cea15d246339d29c04492d9df01dade3d783995cb33c7825980d9ab7665ec7"
+    },
+    {
+      "source": "results/20261012-000915-hand-replay-R-reached-measured-dt0.016666666666666666-hold-AB/arrival-events.jsonl",
+      "published": "evidence/R/arrival-events.jsonl",
+      "sha256": "e7d451d6fb0133c886eb4396cacf48accb6ead0469192176afe7f36c6b636cb7"
+    },
+    {
+      "source": "results/20261012-000915-hand-replay-R-reached-measured-dt0.016666666666666666-hold-AB/patches-per-frame.jsonl",
+      "published": "evidence/R/patches-per-frame.jsonl",
+      "sha256": "74be762d8d688480f39094da1afb52fea919354de21aa1f0ec455c278a1cf005"
+    },
+    {
+      "source": "results/20261012-000915-hand-replay-R-reached-measured-dt0.016666666666666666-hold-AB/failure-events.json",
+      "published": "evidence/R/failure-events.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "source": "results/20261012-000915-hand-replay-R-reached-measured-dt0.016666666666666666-hold-AB/robot-spheres.npz",
+      "published": "evidence/R/robot-spheres.npz",
+      "sha256": "70ee64fec2aafaf7e8ee1b0fc6f6a58e95f1ff1d12cc55055102dcfdc274a14f"
+    },
+    {
+      "source": "results/20261012-001017-hand-replay-LOW-reached-measured-dt0.016666666666666666-hold-AB/metrics.jsonl",
+      "published": "evidence/LOW/metrics.jsonl",
+      "sha256": "38e89e3bfd2fcd6ca9189a6b31ba3e353d9c7c240a0d9f625b85402def0e07a1"
+    },
+    {
+      "source": "results/20261012-001017-hand-replay-LOW-reached-measured-dt0.016666666666666666-hold-AB/summary.json",
+      "published": "evidence/LOW/summary.json",
+      "sha256": "d6397741a11e1fd1b163676c82e0ad9a69a05eafe2b41ac1d4d728787ad5bf41"
+    },
+    {
+      "source": "results/20261012-001017-hand-replay-LOW-reached-measured-dt0.016666666666666666-hold-AB/control-settings.json",
+      "published": "evidence/LOW/control-settings.json",
+      "sha256": "4e93dc7ca3ef651443bb74e1bcd91bd715d830d204934dacda9bb1c332c0952b"
+    },
+    {
+      "source": "results/20261012-001017-hand-replay-LOW-reached-measured-dt0.016666666666666666-hold-AB/mass-policy.json",
+      "published": "evidence/LOW/mass-policy.json",
+      "sha256": "4f7b2655e81ac78a17c458bd15dcf44761f4ea744023b57ae3f716735df857ab"
+    },
+    {
+      "source": "results/20261012-001017-hand-replay-LOW-reached-measured-dt0.016666666666666666-hold-AB/cost-connection.json",
+      "published": "evidence/LOW/cost-connection.json",
+      "sha256": "b2ff5fe4439cb2b4c9fe73b20cc04f8daa71722d9bedf571701d4b9014c5d2a2"
+    },
+    {
+      "source": "results/20261012-001017-hand-replay-LOW-reached-measured-dt0.016666666666666666-hold-AB/runtime.json",
+      "published": "evidence/LOW/runtime.json",
+      "sha256": "1bbf57251c48b616ca2c7403d6de44466a0b1c01bfac0b29fbb17ee76f831ea9"
+    },
+    {
+      "source": "results/20261012-001017-hand-replay-LOW-reached-measured-dt0.016666666666666666-hold-AB/goal-events.jsonl",
+      "published": "evidence/LOW/goal-events.jsonl",
+      "sha256": "f5cea15d246339d29c04492d9df01dade3d783995cb33c7825980d9ab7665ec7"
+    },
+    {
+      "source": "results/20261012-001017-hand-replay-LOW-reached-measured-dt0.016666666666666666-hold-AB/arrival-events.jsonl",
+      "published": "evidence/LOW/arrival-events.jsonl",
+      "sha256": "4464101896c27d9e18b376b75e7ba627944f30fef8492f053d95ac4c02efc2c6"
+    },
+    {
+      "source": "results/20261012-001017-hand-replay-LOW-reached-measured-dt0.016666666666666666-hold-AB/patches-per-frame.jsonl",
+      "published": "evidence/LOW/patches-per-frame.jsonl",
+      "sha256": "74be762d8d688480f39094da1afb52fea919354de21aa1f0ec455c278a1cf005"
+    },
+    {
+      "source": "results/20261012-001017-hand-replay-LOW-reached-measured-dt0.016666666666666666-hold-AB/failure-events.json",
+      "published": "evidence/LOW/failure-events.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "source": "results/20261012-001017-hand-replay-LOW-reached-measured-dt0.016666666666666666-hold-AB/robot-spheres.npz",
+      "published": "evidence/LOW/robot-spheres.npz",
+      "sha256": "80ec71c945f5a816eada2be11cd57b6be21961923979e0fbd4dbc3e2b378893b"
+    },
+    {
+      "source": "results/20261012-002203-hand-replay-HIGH-reached-measured-dt0.016666666666666666-hold-p1.0-AB/metrics.jsonl",
+      "published": "evidence/HIGH/metrics.jsonl",
+      "sha256": "917951f5644fe203b20b4472713c13bbc28ce0656cbb72955bdd83fc7d8e80d3"
+    },
+    {
+      "source": "results/20261012-002203-hand-replay-HIGH-reached-measured-dt0.016666666666666666-hold-p1.0-AB/summary.json",
+      "published": "evidence/HIGH/summary.json",
+      "sha256": "701d630806e15895186bbad56dbea01f6110730e33c784ce0c810105ac2ac624"
+    },
+    {
+      "source": "results/20261012-002203-hand-replay-HIGH-reached-measured-dt0.016666666666666666-hold-p1.0-AB/control-settings.json",
+      "published": "evidence/HIGH/control-settings.json",
+      "sha256": "4e93dc7ca3ef651443bb74e1bcd91bd715d830d204934dacda9bb1c332c0952b"
+    },
+    {
+      "source": "results/20261012-002203-hand-replay-HIGH-reached-measured-dt0.016666666666666666-hold-p1.0-AB/mass-policy.json",
+      "published": "evidence/HIGH/mass-policy.json",
+      "sha256": "673d404cc165a8569aafdbbed8b59db788d1a05fc2fa14474568a0494462cab8"
+    },
+    {
+      "source": "results/20261012-002203-hand-replay-HIGH-reached-measured-dt0.016666666666666666-hold-p1.0-AB/cost-connection.json",
+      "published": "evidence/HIGH/cost-connection.json",
+      "sha256": "494db45fe6b088d55b554bf7b3687c311dca380385f233c7235d25fc9cb9cc00"
+    },
+    {
+      "source": "results/20261012-002203-hand-replay-HIGH-reached-measured-dt0.016666666666666666-hold-p1.0-AB/runtime.json",
+      "published": "evidence/HIGH/runtime.json",
+      "sha256": "d96160481a0b47a43f0a74324ed4c1921e6ffde071eafb880da69a532b21ca31"
+    },
+    {
+      "source": "results/20261012-002203-hand-replay-HIGH-reached-measured-dt0.016666666666666666-hold-p1.0-AB/goal-events.jsonl",
+      "published": "evidence/HIGH/goal-events.jsonl",
+      "sha256": "f5cea15d246339d29c04492d9df01dade3d783995cb33c7825980d9ab7665ec7"
+    },
+    {
+      "source": "results/20261012-002203-hand-replay-HIGH-reached-measured-dt0.016666666666666666-hold-p1.0-AB/arrival-events.jsonl",
+      "published": "evidence/HIGH/arrival-events.jsonl",
+      "sha256": "6496e7a30a1a29bb51d579cf70c1e3a3d654f1ae0a7a69f5cd6bac472b178c63"
+    },
+    {
+      "source": "results/20261012-002203-hand-replay-HIGH-reached-measured-dt0.016666666666666666-hold-p1.0-AB/patches-per-frame.jsonl",
+      "published": "evidence/HIGH/patches-per-frame.jsonl",
+      "sha256": "74be762d8d688480f39094da1afb52fea919354de21aa1f0ec455c278a1cf005"
+    },
+    {
+      "source": "results/20261012-002203-hand-replay-HIGH-reached-measured-dt0.016666666666666666-hold-p1.0-AB/eta-after-run.json",
+      "published": "evidence/HIGH/eta-after-run.json",
+      "sha256": "e1ff805f171bbaf1b49dd2a30f6c39ff3f28e312c298506b4af277ac33a4e910"
+    },
+    {
+      "source": "results/20261012-002203-hand-replay-HIGH-reached-measured-dt0.016666666666666666-hold-p1.0-AB/failure-events.json",
+      "published": "evidence/HIGH/failure-events.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "source": "results/20261012-002203-hand-replay-HIGH-reached-measured-dt0.016666666666666666-hold-p1.0-AB/robot-spheres.npz",
+      "published": "evidence/HIGH/robot-spheres.npz",
+      "sha256": "8596faba0750b0fac7dc90ebbb4e6e124c53a53b4571d29161a7726e69e7ba5f"
+    },
+    {
+      "source": "results/hand-eta-sensitivity-20261012/video-isaac/isaac-comparison-baseline-LOW-HIGH.mp4",
+      "published": "docs/media/isaac-comparison.mp4",
+      "sha256": "d0b5eeb62d8f794336081c120e88baa7fe27914bac2a86e297f79fd00c8b031c"
+    }
+  ],
+  "publication_metadata_redactions": [
+    "data/hand-tape-20261012-000004-472steps-registered/metadata.json",
+    "evidence/R/runtime.json",
+    "evidence/HIGH/runtime.json",
+    "evidence/LOW/runtime.json"
+  ],
+  "note": "Hashes above describe original copied files. Only device_serial and absolute local path strings were sanitized in listed metadata copies; physics/policy/depth/metrics unchanged."
+}

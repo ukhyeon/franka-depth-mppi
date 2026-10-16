@@ -1,0 +1,277 @@
+{
+  "native": [
+    "<LOCAL_HOME>/depth-camera-check/abi0-recovery/install/lib/libnvblox_lib.so"
+  ],
+  "wrapper": [
+    "<LOCAL_HOME>/depth-camera-check/abi0-recovery/nvblox_torch/src/nvblox_torch/bin/libpy_nvblox.so"
+  ],
+  "torch": "2.5.1+cu118",
+  "abi": false,
+  "scene": {
+    "goals_wxyz": [
+      [
+        0.4,
+        -0.5,
+        0.4,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0.4,
+        0.5,
+        0.4,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "camera_to_robot_pose_wxyz": [
+      -0.05,
+      0,
+      0.45,
+      0.5,
+      -0.5,
+      0.5,
+      -0.5
+    ],
+    "map_voxel_m": 0.03,
+    "clipping_distance_m": 0.7,
+    "goal_hold_sim_s": 0.0,
+    "position_tolerance_m": 0.01,
+    "orientation_tolerance_rad": 0.05,
+    "physics_dt": 0.016666666666666666,
+    "solver_dt": 0.02,
+    "seed": 0,
+    "sampling": "original verified MPPI config unchanged",
+    "roi_scope": "original manual ROI; central visible link region only; endpoints not fully observed",
+    "goal_switch_mode": "immediate_on_actual_tolerance"
+  },
+  "mode": "replay",
+  "condition": "HIGH",
+  "policy_key": "ETA23",
+  "goal_plan": "AB",
+  "obstacle_guide": {
+    "experiment": "real hand, static, manual ROI (no hand-recognition model)",
+    "roi": {
+      "min": [
+        0.42,
+        -0.08,
+        0.32
+      ],
+      "max": [
+        0.58,
+        0.08,
+        0.48
+      ]
+    },
+    "patch_rule": {
+      "patch_bin_yz_m": 0.02,
+      "min_points_per_bin": 12,
+      "nominal_point_proxy_dims_m": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "proxy_capacity": 64
+    },
+    "recommended_hand": {
+      "pose": "palm facing the lens, fingers together pointing up, forearm vertical below the hand with the elbow resting on a support; arm stays below the hand (not behind it, not from the side)",
+      "palm_face_x_m": 0.55,
+      "center_y_m": 0.0,
+      "wrist_z_m": 0.29,
+      "fingertip_z_m": 0.47,
+      "camera_frame": {
+        "palm_depth_along_axis_m": 0.6,
+        "horizontal": "centered on the optical axis",
+        "fingertips_above_lens_height_m": 0.02,
+        "wrist_below_lens_height_m": 0.16
+      },
+      "rule": "fingertips >= 1 cm inside ROI top, maximize hand-face fraction in ROI (analysis/hand-height-scan.json); fixed before any capture or LOW/HIGH run",
+      "assumed_hand_dims_m": {
+        "palm_width": 0.09,
+        "length_wrist_to_tip": 0.18,
+        "palm_thickness": 0.03
+      }
+    },
+    "nominal_sweep": {
+      "run": "../d435i-mppi-shuttle/results/20261011-215221-diagnostic-R-reached-measured-dt0.016666666666666666-no-camera",
+      "AB_steps": [
+        131,
+        296
+      ],
+      "crossing_step": 160,
+      "crossing_q": [
+        0.0726250559091568,
+        0.3123628795146942,
+        -0.13365545868873596,
+        -1.7099140882492065,
+        0.26647135615348816,
+        1.8725483417510986,
+        -0.0098244184628129
+      ],
+      "crossing_ee": [
+        0.6294907331466675,
+        -0.011641524732112885,
+        0.39930203557014465
+      ]
+    },
+    "capture": {
+      "stages": [
+        "BACKGROUND",
+        "PLACING",
+        "HOLD",
+        "REMOVED"
+      ],
+      "auto_stop_after_removed_sim_s": 3.0,
+      "recommended_hold_wall_s": 15,
+      "stable_frame_rule": {
+        "roi_centroid_shift_max_m": 0.01,
+        "roi_points_min_fraction_of_hold_median": 0.5,
+        "window": "running median of the current run (registered tapes); HOLD median (unregistered)"
+      },
+      "tape": "longest contiguous stable HOLD run; frames replayed in recorded order; looped only if the requested replay is longer, and flagged",
+      "hold_frames_target": 200,
+      "tape_steps": 600,
+      "registration": "virtual camera translation from the capture (register_hand.py); placement precision not required",
+      "live_guide": {
+        "empty_view_max_points": 200,
+        "hand_depth_range_m": [
+          0.4,
+          0.62
+        ],
+        "stable_rule": "running median of current run, 1 cm (register_hand.stable_runs)"
+      },
+      "hold_frames_note": "200 frames >= ~165 needed for one A->B replay (~5.3 s); 600-step tapes reuse frames cyclically (flagged looped)"
+    },
+    "background_limits": {
+      "roi_points_max": 50,
+      "near_path_points_max": 200,
+      "note": "checked with no hand: ROI and nominal robot path corridor (+0.05 m) should be empty"
+    },
+    "bin_mixed_depth_m": 0.03,
+    "behind_hand_m": 0.04
+  },
+  "camera_pose_used": [
+    0.1469999866485595,
+    0.02208540743021902,
+    0.3830974546349903,
+    0.5,
+    -0.5,
+    0.5,
+    -0.5
+  ],
+  "hand_registration": {
+    "original_camera_to_robot_pose_wxyz": [
+      -0.05,
+      0,
+      0.45,
+      0.5,
+      -0.5,
+      0.5,
+      -0.5
+    ],
+    "registered_camera_to_robot_pose_wxyz": [
+      0.1469999866485595,
+      0.02208540743021902,
+      0.3830974546349903,
+      0.5,
+      -0.5,
+      0.5,
+      -0.5
+    ],
+    "translation_m": [
+      0.197,
+      0.0221,
+      -0.0669
+    ],
+    "voxel_phase": {
+      "voxel_m": 0.03,
+      "surface_phase_before": 0.767,
+      "target_phase": 0.6,
+      "depth_adjust_m": -0.005
+    },
+    "observed_hand_m": {
+      "palm_front_x": 0.34800003170967103,
+      "center_y": -0.02208540743021902,
+      "fingertip_z": 0.5369025453650097,
+      "frame_std_m": [
+        0.0031,
+        0.0047,
+        0.0021
+      ],
+      "frames_used": 236
+    },
+    "target_m": {
+      "palm_front_x": 0.55,
+      "center_y": 0.0,
+      "fingertip_z": 0.47
+    },
+    "background_frames": 526,
+    "rule": "virtual camera translation only; computed from the capture before any replay; identical for R/LOW/HIGH"
+  },
+  "failure_action": "hold-measured",
+  "drive_velocity_target": "zero",
+  "without_camera_map": false,
+  "fixed_world": [
+    {
+      "name": "table",
+      "pose": [
+        0.0,
+        0.0,
+        -0.11,
+        1,
+        0,
+        0,
+        0.0
+      ],
+      "dims": [
+        2.2,
+        2.2,
+        0.2
+      ]
+    },
+    {
+      "name": "cube4",
+      "pose": [
+        -0.5,
+        0.0,
+        0.3,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dims": [
+        0.05,
+        2.0,
+        2.0
+      ]
+    }
+  ],
+  "particles": 400,
+  "horizon": 30,
+  "iterations": 5,
+  "source_hashes": {
+    "goal_progress.py": "b3eb3d5527b26bac7b9e2e8262b758c0e8c5da24f428ec54ea7763acf62e0b83",
+    "input_source.py": "3d47d2f2d0b05d3e3cae74d73606b83146d6efd8dfc74a7e894100a5309e9b44",
+    "build_hand_tape.py": "853d8785038f84a5d781e07e2da7f419cf6a5c7971144d90aa85ca29d68ffd3d",
+    "hand_experiment.py": "21103fd4036f7d2ffd42933696796558a583633d6ed4676698e616717c7e6afd",
+    "portfolio.py": "bf8c7526faec6329aa3b1905e7a9dd59df520a25aee31fb698715ef3197da467",
+    "target_margin.py": "bd2cf3ddc8c82299b0fd34bacf0770482456d700a52ec85f64897e3a46e8722f",
+    "failure_probe.py": "a0de732658b124301b40357083918a3e6d783129c3f0e3ea8c48b7023e7ba896",
+    "experiment.py": "69eb880e47e511b082734f3442bef4e8786abf6f4735727de49cf80d53933efb",
+    "camera_panel.py": "8180828b22b18e9fba17fbf9bfaaea4ce411f817a15809b5f096efeedbb8d02c",
+    "hand_gui.py": "9f9c04a72e0c0d681c2f136905f4453166bb63d8be6972efa247667dd3d5a2e5",
+    "camera_check.py": "38eba0dbb2473e52e6ccb5fdc081075f92fff5af647b701c098f3d7590e98325",
+    "target_cost.py": "9146cdd622af018c0c57e0df736bc26edfcddad32e6ab419667b8141acceb180",
+    "helper.py": "feba9c2cb7ba9e6785fcf1c35ab49cb465c6d0192b1d53ad1a3878ae6e166148",
+    "static_gui.py": "fd2d87164eb1540070bb1d31ee0bb304f8e125721d5b9cd80c7a3927dde956f7",
+    "base_target_cost.py": "38687f39cc0006e174b06a5725aaf756dc9f040acd2b1bbdcf40d13c0f2ddfc0",
+    "synthetic_board_tape.py": "034542e6b503ca8217cf02a0728c9d88973005e96e21cf19149cf7372f9c3356",
+    "policy.py": "396e458c718843eb47e031bce9b70cc6fbf643e1e86ee6d10b288a06c4ad897a",
+    "register_hand.py": "3f3fc8c8c3635ad8df11e5c8464a27762c1a6c867fc18b6df5360adbb29ff382"
+  }
+}

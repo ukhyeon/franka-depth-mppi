@@ -1,0 +1,9 @@
+# Preserve hash-verified recordings, evidence and copied experiment code byte-for-byte.
+data/** -text
+evidence/** -text
+experiment/** -text
+LICENSE -text
+*.npz binary
+*.png binary
+*.mp4 binary
+scripts/*.sh text eol=lf

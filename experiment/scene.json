@@ -1,0 +1,42 @@
+{
+  "goals_wxyz": [
+    [
+      0.4,
+      -0.5,
+      0.4,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0.4,
+      0.5,
+      0.4,
+      0,
+      1,
+      0,
+      0
+    ]
+  ],
+  "camera_to_robot_pose_wxyz": [
+    -0.05,
+    0,
+    0.45,
+    0.5,
+    -0.5,
+    0.5,
+    -0.5
+  ],
+  "map_voxel_m": 0.03,
+  "clipping_distance_m": 0.7,
+  "goal_hold_sim_s": 0.0,
+  "position_tolerance_m": 0.01,
+  "orientation_tolerance_rad": 0.05,
+  "physics_dt": 0.016666666666666666,
+  "solver_dt": 0.02,
+  "seed": 0,
+  "sampling": "original verified MPPI config unchanged",
+  "roi_scope": "original manual ROI; central visible link region only; endpoints not fully observed",
+  "goal_switch_mode": "immediate_on_actual_tolerance"
+}

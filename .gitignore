@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.env
+.env.local
+experiment/results/
+experiment/inputs/
+experiment/assets/
+experiment/mpl-cache/
+experiment/capture-stage.txt
+.cache/
+*.so
+*.o
