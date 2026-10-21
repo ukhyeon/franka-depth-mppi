@@ -3,7 +3,7 @@
 | 파일 | 출처·내용 | 기준 |
 |---|---|---|
 |1-real-hand-rgb-depth.png|D435i 기록 세션의 RGB+정렬 깊이. 원본 SDK frame2571, 입력 source frame673로 대응 확인된 기존 자료|실제 촬영. 손 안정 HOLD 테이프 구간 안의 한 프레임|
-|isaac-comparison.gif|`docs/media/isaac-comparison.mp4`를 1280px·12fps GIF로 변환(README 대표 이미지)|자막 거리는 buffer 포함 값|
+|isaac-comparison.gif|`docs/media/isaac-comparison.mp4`를 0.5배속·1280px·8fps GIF로 변환(README 대표 이미지)|자막 거리는 buffer 포함 값|
 |2-isaac-and-top-path-baseline-LOW-HIGH.png|기존 Isaac Sim 비교 녹화+로그 기반 위에서 본 경로 합성|위 step164/2.73s, 아래 step233/3.88s. 표의 최소값은 전체 A→B 구간|
 |3a-path-comparison-left-3d.png|관절/EE 로그 재구성|시뮬레이터 스크린샷이 아닌3D 경로 그림|
 |control-pipeline.svg|실제 로컬 코드의 연결 구조를 문서용 벡터로 작성|초록=기존 구성, 파랑=프로젝트 연결·추가 구성|
