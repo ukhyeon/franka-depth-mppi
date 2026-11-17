@@ -10,6 +10,9 @@ Isaac Sim 녹화를 0.5배속으로 재생합니다(시뮬레이션 6.3s). 왼�
 
 [원본 영상(mp4)](docs/media/isaac-comparison.mp4) · [정지 화면과 위에서 본 EE 경로](docs/images/2-isaac-and-top-path-baseline-LOW-HIGH.png) — 정지 화면은 t=2.73s, EE 경로는 t=3.88s까지의 로그 기반 누적 경로입니다. 이 그림의 거리는 **20mm 계획 버퍼를 제외한 근사 충돌 구 표면–ROI 손 관측점** 기준이고 머리글의 최소 거리는 각 조건의 A→B 전체 구간 최솟값입니다.
 
+> **후속 확장 프로젝트: [effmass-mpc](https://github.com/ukhyeon/effmass-mpc)**
+> 이 프로젝트에서 가정값으로 둔 손 유효질량 대신 SMPL 사람 모델에서 계산한 분절별·방향별 유효질량을 쓰고, 그에 따라 회피 구역의 모양이 달라지는 MPC로 확장했습니다 (Isaac Sim, Franka FR3).
+
 ## 구현 구조와 기여
 
 ![제어 및 비용 연결 구조](docs/images/control-pipeline.svg)
